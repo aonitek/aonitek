@@ -1,0 +1,81 @@
+/* ===== GLOBAL STYLES & RESET ===== */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.04em;
+        }
+
+        /* ===== CUSTOM ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Grid Pattern */
+        .grid-bg {
+            background-image: radial-gradient(rgba(74, 222, 128, 0.15) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Button Glows */
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.5);
+        }
+
+        /* Card Hover Effects */
+        .glass-card {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(74, 222, 128, 0.3);
+            background: #141414;
+        }
+
+        /* Navbar Blur */
+        .nav-scrolled {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Chat UI Styles */
+        .chat-bubble-user {
+            background: #181818;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px 18px 2px 18px;
+        }
+        .chat-bubble-ai {
+            background: #00b8d4;
+            color: #000000;
+            border-radius: 18px 18px 18px 2px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #181818; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0099b2; }
