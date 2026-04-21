@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ============================================================================ -->
+    <!-- CSS & TAILWIND CONFIGURATION                                                 -->
+    <!-- Custom theme settings to match Aonitek brand guidelines                      -->
+    <!-- ============================================================================ -->
+    
+
+    <!-- ============================================================================ -->
+    <!-- CUSTOM CSS FOR SLIDERS & ANIMATIONS                                          -->
+    <!-- Overriding default range inputs for a premium, branded look                  -->
+    <!-- ============================================================================ -->
+    
+
+<!-- SEO Meta Tags -->
+<title>¿Cuánto dinero pierdes sin un Agente de IA?</title>
+<meta name="description" content="Usa nuestra calculadora interactiva para descubrir el impacto financiero de no contar con tecnología de empleados digitales en tu equipo." />
+<meta name="keywords" content="calculadora roi empleado digital" />
+<meta property="og:title" content="¿Cuánto dinero pierdes sin un Agente de IA?" />
+<meta property="og:description" content="Usa nuestra calculadora interactiva para descubrir el impacto financiero de no contar con tecnología de empleados digitales en tu equipo." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="¿Cuánto dinero pierdes sin un Agente de IA?" />
+<meta name="twitter:description" content="Usa nuestra calculadora interactiva para descubrir el impacto financiero de no contar con tecnología de empleados digitales en tu equipo." />
+<link rel="icon" href="/api/files/landing-page/landing_page_favicon_ai_124_1776123059321.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/api/files/landing-page/landing_page_favicon_ai_124_1776123059321.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/api/files/landing-page/landing_page_favicon_ai_124_1776123059321.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/api/files/landing-page/landing_page_favicon_ai_124_1776123059321.png" />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.aonitek.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=3236');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='kGytQHK';
+  var apiBase='https://app.aonitek.com';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      document.body.appendChild(overlay);
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+
+    <!-- ============================================================================ -->
+    <!-- HEADER SECTION: Logo and Tagline                                             -->
+    <!-- Mobile Padding: px-4 py-6 ensures proper safe area                           -->
+    <!-- ============================================================================ -->
+    <nav data-section="navbar" class="w-full px-4 py-6 md:px-8 lg:px-12 border-b border-aonitek-border/50 bg-aonitek-base/90 sticky top-0 z-50 glass-panel">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <a href="https://www.aonitek.com" class="shrink-0">
+                    <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="Aonitek Logo" class="h-10 w-auto">
+                </a>
+                <div class="h-6 w-px bg-aonitek-border hidden sm:block"></div>
+                <span class="text-aonitek-muted text-sm font-medium tracking-wide hidden sm:block uppercase">Automatización Inteligente</span>
+            </div>
+            <a href="https://www.aonitek.com" class="text-sm font-medium text-aonitek-green hover:text-white transition-colors border border-aonitek-green/30 hover:border-aonitek-green rounded-full px-5 py-2">
+                Solicitar Asesoría
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Main headline and descriptive subtitle                         -->
+    <!-- Features: Responsive typography, centered content                            -->
+    <!-- ============================================================================ -->
+    <header data-section="hero" class="w-full px-4 pt-16 pb-10 md:px-8 lg:px-12 lg:pt-24 lg:pb-16 text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
+            ¿Cuánto le cuesta <span class="text-aonitek-green text-glow">no tener</span> un Empleado Digital?
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-aonitek-muted font-medium max-w-2xl mx-auto">
+            Calculá tu pérdida mensual real en dólares en 30 segundos ajustando las variables de tu negocio.
+        </p>
+    </header>
+
+    <!-- ============================================================================ -->
+    <!-- CALCULATOR SECTION: Interactive grid with inputs and results                 -->
+    <!-- Layout: 1 column mobile, 2 columns desktop (max-width 1200px)                -->
+    <!-- ============================================================================ -->
+    <main data-section="calculator" class="w-full px-4 py-6 md:px-8 lg:px-12 mb-20 flex-grow">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            
+            <!-- LEFT COLUMN: SLIDERS (7 columns on desktop) -->
+            <div class="lg:col-span-7 bg-aonitek-card rounded-2xl p-6 md:p-8 border border-aonitek-border shadow-xl">
+                <h2 class="text-xl font-bold text-white mb-8 border-b border-aonitek-border pb-4 flex items-center gap-3">
+                    <svg class="w-5 h-5 text-aonitek-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    Tus Variables Operativas
+                </h2>
+                
+                <div class="space-y-8" id="sliders-container">
+                    
+                    <!-- Slider 1: Consultas Diarias -->
+                    <div class="slider-group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">Consultas diarias recibidas</label>
+                            <span id="valConsultas" class="text-xl font-bold text-aonitek-green">50</span>
+                        </div>
+                        <input type="range" id="consultas" min="5" max="200" step="1" value="50" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Promedio de mensajes de clientes por día (WhatsApp, Redes, Web).</p>
+                    </div>
+
+                    <!-- Slider 2: % Sin Respuesta -->
+                    <div class="slider-group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">% de consultas sin respuesta a tiempo</label>
+                            <span id="valSinRespuesta" class="text-xl font-bold text-aonitek-green">30%</span>
+                        </div>
+                        <input type="range" id="sinRespuesta" min="10" max="80" step="1" value="30" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Porcentaje de leads que se enfrían por demoras en la atención.</p>
+                    </div>
+
+                    <!-- Slider 3: Ticket Promedio -->
+                    <div class="slider-group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">Ticket promedio de venta (USD)</label>
+                            <span id="valTicket" class="text-xl font-bold text-aonitek-green">$100</span>
+                        </div>
+                        <input type="range" id="ticket" min="10" max="2000" step="10" value="100" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Valor promedio de lo que gasta un cliente en tu negocio.</p>
+                    </div>
+
+                    <!-- Slider 4: Horas Perdidas Diarias -->
+                    <div class="slider-group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">Horas diarias en tareas repetitivas</label>
+                            <span id="valHoras" class="text-xl font-bold text-aonitek-green">4 hs</span>
+                        </div>
+                        <input type="range" id="horas" min="1" max="30" step="1" value="4" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Tiempo total que tu equipo pierde respondiendo preguntas frecuentes y agendando.</p>
+                    </div>
+
+                    <!-- Slider 5: Costo por Hora -->
+                    <div class="slider-group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">Costo promedio por hora laboral (USD)</label>
+                            <span id="valCostoHora" class="text-xl font-bold text-aonitek-green">$10</span>
+                        </div>
+                        <input type="range" id="costoHora" min="3" max="50" step="1" value="10" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Cálculo del valor/hora de un empleado humano dedicado a atención.</p>
+                    </div>
+
+                    <!-- Slider 6: Inversión Empleado Digital (Dynamic) -->
+                    <div class="slider-group pt-6 border-t border-aonitek-border border-dashed">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="text-sm md:text-base font-semibold text-gray-200">Inversión mensual Empleado Digital (USD)</label>
+                            <span id="valInversion" class="text-xl font-bold text-aonitek-green">$100</span>
+                        </div>
+                        <input type="range" id="inversion" min="80" max="1000" step="10" value="100" class="interactive-slider">
+                        <p class="text-xs text-aonitek-muted mt-1">Costo mensual estimado de la suscripción a Aonitek.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: RESULTS (5 columns on desktop) -->
+            <div class="lg:col-span-5 flex flex-col gap-6 sticky top-28 h-fit">
+                
+                <!-- Pérdida Total Card (Prominent) -->
+                <div class="bg-gradient-to-br from-[#111A16] to-aonitek-card rounded-2xl p-6 md:p-8 border border-aonitek-green/30 shadow-[0_0_30px_rgba(29,158,117,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-aonitek-green/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                    <h3 class="text-sm font-bold text-aonitek-muted uppercase tracking-wider mb-2">Pérdida Total Mensual (USD)</h3>
+                    <div id="resTotal" class="text-5xl md:text-6xl font-black text-aonitek-green text-glow mb-2 tracking-tighter">
+                        $0
+                    </div>
+                    <p class="text-sm text-gray-300">Este es el costo real oculto de no automatizar tu atención al cliente.</p>
+                </div>
+
+                <!-- Breakdown Cards -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-aonitek-card rounded-xl p-5 border border-aonitek-border relative group">
+                        <h4 class="text-xs font-semibold text-aonitek-muted uppercase tracking-wide mb-2 flex flex-col">
+                            Ventas Perdidas (USD)
+                            <span class="text-[10px] lowercase text-gray-500 mt-0.5 normal-case">*Calculado al 15% de cierre</span>
+                        </h4>
+                        <div id="resLeads" class="text-2xl font-bold text-white mb-1">$0</div>
+                        <div id="resLeadsCount" class="text-xs text-aonitek-muted">0 leads perdidos</div>
+                    </div>
+                    <div class="bg-aonitek-card rounded-xl p-5 border border-aonitek-border">
+                        <h4 class="text-xs font-semibold text-aonitek-muted uppercase tracking-wide mb-2">Horas Improductivas (USD)</h4>
+                        <div id="resHoras" class="text-2xl font-bold text-white mb-1">$0</div>
+                        <div id="resHorasCount" class="text-xs text-aonitek-muted">0 horas perdidas</div>
+                    </div>
+                </div>
+
+                <!-- ROI Analysis -->
+                <div class="bg-aonitek-card rounded-2xl p-6 border border-aonitek-border">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-aonitek-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Análisis de Retorno (ROI)
+                    </h3>
+                    <p class="text-[13px] text-aonitek-muted mb-5 leading-relaxed">
+                        * El <strong>ROI (Retorno sobre Inversión)</strong> te indica de forma simple cuánto dinero recuperas o ahorras por cada dólar que inviertes. Un porcentaje positivo significa que el sistema se paga solo y te genera ganancias extra casi de inmediato.
+                    </p>
+                    
+                    <div class="space-y-5">
+                        <div class="flex justify-between items-center border-b border-aonitek-border/50 pb-4">
+                            <span class="text-sm text-gray-300 font-medium">ROI Estimado Mensual</span>
+                            <span id="resRoi" class="text-3xl font-black transition-colors duration-300">0%</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-sm text-gray-300 font-medium">Período de Recuperación</span>
+                            <span id="resPayback" class="text-base md:text-lg font-bold text-white bg-aonitek-base px-3 py-1 rounded-md border border-aonitek-border">0 días</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Conclusion -->
+                    <div class="mt-6 p-4 rounded-lg bg-aonitek-base/50 border border-aonitek-border/50">
+                        <p id="resConclusion" class="text-sm text-gray-300 leading-relaxed italic">
+                            Ajusta los valores para ver tu análisis personalizado.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <button onclick="window.location.href='https://www.aonitek.com'" class="w-full bg-aonitek-green hover:bg-[#158260] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-200 shadow-[0_4px_14px_0_rgba(29,158,117,0.39)] hover:shadow-[0_6px_20px_rgba(29,158,117,0.23)] hover:-translate-y-1">
+                    Detener Pérdidas Ahora
+                </button>
+
+            </div>
+        </div>
+
+        <!-- ============================================================================ -->
+        <!-- JAVASCRIPT LOGIC - CÁLCULO UNIFICADO CON TASA DE CIERRE DEL 15%              -->
+        <!-- INSTRUCCIÓN CRÍTICA: TODOS LOS VALORES DE PÉRDIDA USAN EL MISMO CÁLCULO      -->
+        <!-- ============================================================================ -->
+        
+    </main>
+
+    <!-- ============================================================================ -->
+    <!-- FOOTER SECTION: Copyright, Disclaimer, and Contact details                   -->
+    <!-- ============================================================================ -->
+    <footer data-section="footer" class="w-full px-4 py-12 md:px-8 lg:px-12 bg-[#0A0C10] border-t border-aonitek-border mt-auto text-center md:text-left">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-1">
+                <a href="https://www.aonitek.com" target="_blank" class="inline-block">
+                    <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="Aonitek" class="h-8 mx-auto md:mx-0 mb-4 opacity-80 hover:opacity-100 transition-opacity">
+                </a>
+                <p class="text-xs text-aonitek-muted leading-relaxed max-w-xs mx-auto md:mx-0">
+                    Potenciamos empresas mediante Empleados Digitales impulsados por IA conversacional avanzada.
+                </p>
+            </div>
+            
+            <div class="md:col-span-1 flex flex-col gap-2">
+                <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Contacto</h5>
+                <a href="mailto:info@aonitek.com" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">info@aonitek.com</a>
+                <a href="tel:+5492974643128" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">+54 9 297 4643128</a>
+                <a href="https://www.aonitek.com" target="_blank" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">www.aonitek.com</a>
+            </div>
+
+            <div class="md:col-span-1">
+                <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Aviso Legal</h5>
+                <p class="text-xs text-aonitek-muted leading-relaxed">
+                    La información proporcionada por esta calculadora es una estimación referencial basada en los datos ingresados y un mes comercial promedio (30 días). Todos los valores monetarios están expresados en dólares estadounidenses (USD). Los resultados reales pueden variar según la industria y ejecución. A cada proyecto realizado por Aonitek se le aplica un pago único por desarrollo.
+                </p>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-aonitek-border/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-aonitek-muted">
+                © <span id="year">2026</span> Aonitek. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    
+  <script src="script.js"></script>
+</body>
+</html>
