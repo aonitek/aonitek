@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Aonitek implementa inteligencia artificial en tu negocio con acompañamiento real. Página web + IA, agentes omnicanales y capacitación in-company. Resultados en 14 días. LATAM.">
+    
+    <link rel="canonical" href="https://aonitek.com">
+    
+    <!-- Open Graph / Social Media -->
+    
+    <meta property="og:url" content="https://aonitek.com">
+    
+    
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    
+
+    <!-- Schema.org Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aonitek",
+      "url": "https://aonitek.com",
+      "logo": "https://aonitek.com/logo.png",
+      "description": "Agencia de automatización con IA para PYMEs en Latinoamérica.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "areaServed": "LATAM"
+      }
+    }
+    </script>
+
+<!-- SEO Meta Tags -->
+<title>Landing Page - Jul 13, 2026</title>
+<meta property="og:title" content="Landing Page - Jul 13, 2026" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Landing Page - Jul 13, 2026" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mrjsiwvn-jv0ye";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.aonitek.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5503');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='WVYQiwU9';
+  var apiBase='https://app.aonitek.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='WVYQiwU9';
+  var apiBase='https://app.aonitek.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+<!-- ============================================================================ -->
+<!-- NAVIGATION: Fixed top navbar with blur effect                               -->
+<!-- Features: Mobile toggle, Glassmorphism, CTA                                 -->
+<!-- ============================================================================ -->
+<nav data-section="navbar" id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-4 md:px-8 lg:px-12 flex items-center justify-between" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+    <div class="flex items-center space-x-2">
+        <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="AONITEK Logo" class="h-14">
+        </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <a href="#presencia-digital" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🌐 Presencia Digital</a>
+        <a href="#empleados-digitales" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🤖 Empleados Digitales</a>
+        <a href="#capacitacion" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🚀 Capacitación In-Company</a>
+        <a href="https://aonitek.com/" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🏠 Inicio</a>
+    </div>
+
+    <div class="flex items-center space-x-4" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <a href="https://app.aonitek.com/" class="hidden sm:block bg-[#007a8f] text-white px-5 py-2.5 rounded-full font-bold text-sm btn-glow hover:scale-105 transition-transform" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            app. Aonitek →
+        </a>
+        <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-[#1e2d4a] z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold translate-x-full transition-transform duration-500 md:hidden overflow-hidden" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white" aria-label="Cerrar menú" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="#presencia-digital" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🌐 Presencia Digital</a>
+        <a href="#empleados-digitales" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🤖 Empleados Digitales</a>
+        <a href="#capacitacion" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🚀 Capacitación In-Company</a>
+        <a href="https://aonitek.com/" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🏠 Inicio</a>
+        <a href="https://app.aonitek.com/" class="bg-[#3b82f6] text-white px-8 py-4 rounded-full mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">app. Aonitek →</a>
+    </div>
+</nav>
+
+<!-- ============================================================================ -->
+<!-- HERO SECTION: Main landing area with headline, subtext, and primary CTA     -->
+<!-- Features: Gradient background, animated badge, responsive layout            -->
+<!-- Mobile Padding: Ensures text never touches viewport edges                   -->
+<!-- ============================================================================ -->
+<section data-section="hero" class="hero-section">
+    
+
+    <!-- POLICY HEADER -->
+    <header class="policy-header">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="policy-breadcrumb">
+                <a href="https://aonitek.com">Inicio</a> / Política de Privacidad
+            </div>
+            <h1 class="policy-title">Política de Privacidad</h1>
+            <div class="policy-meta">Última actualización: Julio de 2026</div>
+        </div>
+    </header>
+
+    <!-- POLICY CONTENT -->
+    <div class="policy-container">
+        <!-- SIDEBAR - TABLE OF CONTENTS -->
+        <aside class="policy-sidebar">
+            <div class="policy-sidebar-title">Contenido</div>
+            <ul class="policy-toc">
+                <li><a href="#section-1">Nuestra visión sobre la privacidad</a></li>
+                <li><a href="#section-2">Alcance de esta Política</a></li>
+                <li><a href="#section-3">Responsable del tratamiento</a></li>
+                <li><a href="#section-4">Principios del tratamiento</a></li>
+                <li><a href="#section-5">Información que recopilamos</a></li>
+                <li><a href="#section-6">Cómo utilizamos la información</a></li>
+                <li><a href="#section-7">Uso Responsable de IA</a></li>
+                <li><a href="#section-8">Bases legales</a></li>
+                <li><a href="#section-9">Con quién compartimos</a></li>
+                <li><a href="#section-10">Transferencias internacionales</a></li>
+                <li><a href="#section-11">Conservación de información</a></li>
+                <li><a href="#section-12">Seguridad de la información</a></li>
+                <li><a href="#section-13">Cookies y tecnologías</a></li>
+                <li><a href="#section-14">Enlaces a terceros</a></li>
+                <li><a href="#section-15">Derechos de los titulares</a></li>
+                <li><a href="#section-16">Privacidad de menores</a></li>
+                <li><a href="#section-17">Actualizaciones de Política</a></li>
+                <li><a href="#section-18">Contacto</a></li>
+                <li><a href="#section-19">Nuestro compromiso</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="policy-main">
+            <!-- SECTION 1 -->
+            <section id="section-1" class="policy-section">
+                <h2>1. Nuestra visión sobre la privacidad</h2>
+                <p>En Aonitek entendemos que la confianza es el punto de partida de cualquier relación comercial y también de toda solución basada en inteligencia artificial.</p>
+                <p>Cada consulta que recibimos, cada conversación iniciada con nuestros asistentes inteligentes y cada dato que una persona o empresa decide compartir con nosotros representa un acto de confianza que asumimos con responsabilidad.</p>
+                <p>Por ese motivo, diseñamos nuestros procesos procurando recopilar únicamente la información necesaria para brindar una mejor experiencia, ofrecer nuestros servicios y responder a las solicitudes realizadas a través de nuestro sitio web.</p>
+                <p>La presente Política de Privacidad explica de manera clara y transparente qué información recopilamos, cómo la utilizamos, con quién podemos compartirla, cuánto tiempo la conservamos y cuáles son los derechos que poseen los titulares de los datos personales.</p>
+                <p>Nuestro compromiso es desarrollar soluciones tecnológicas que combinen innovación, inteligencia artificial y automatización con prácticas responsables de protección de datos, transparencia y seguridad.</p>
+                <p>La protección de los datos personales forma parte de nuestro compromiso con la innovación responsable. Consideramos que la confianza constituye un elemento esencial para el desarrollo de soluciones basadas en inteligencia artificial, automatización y transformación digital, por lo que procuramos incorporar criterios de privacidad y seguridad desde el diseño de nuestros servicios.</p>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section id="section-2" class="policy-section">
+                <h2>2. Alcance de esta Política</h2>
+                <p>Esta Política de Privacidad se aplica exclusivamente al sitio web institucional www.aonitek.com, a sus páginas, formularios, asistentes virtuales, canales de contacto y demás funcionalidades disponibles dentro de dicho dominio.</p>
+                <p>El sitio www.aonitek.com tiene como finalidad presentar los servicios de Aonitek, brindar información sobre nuestras soluciones tecnológicas, facilitar el contacto con potenciales clientes y permitir la solicitud de información comercial, demostraciones o reuniones.</p>
+                <p>Esta Política no regula el uso de la plataforma tecnológica disponible en app.aonitek.com, la cual constituye un servicio independiente y posee sus propios Términos de Servicio, Política de Privacidad y demás documentación legal aplicable.</p>
+                <p>Cuando un usuario accede, crea una cuenta o utiliza funcionalidades disponibles en la plataforma app.aonitek.com, resultarán aplicables exclusivamente los documentos legales publicados para dicho servicio.</p>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section id="section-3" class="policy-section">
+                <h2>3. Responsable del tratamiento de los datos</h2>
+                <p>A los efectos de esta Política, "Aonitek", "nosotros", "nuestro" o "la empresa" hace referencia al responsable del tratamiento de los datos personales recopilados a través del sitio web www.aonitek.com.</p>
+                <h3>Datos de contacto</h3>
+                <ul>
+                    <li><strong>Nombre:</strong> Gustavo Zamit</li>
+                    <li><strong>Ubicación:</strong> Comodoro Rivadavia, Provincia del Chubut, República Argentina</li>
+                    <li><strong>Correo electrónico:</strong> info@aonitek.com</li>
+                    <li><strong>Teléfono / WhatsApp:</strong> +54 9 297 4643218</li>
+                </ul>
+                <p>Aonitek actúa como responsable del tratamiento de la información recopilada mediante su sitio institucional y adopta medidas razonables para garantizar un tratamiento responsable, transparente y seguro de los datos personales conforme a la legislación argentina aplicable y a buenas prácticas internacionales de protección de datos.</p>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section id="section-4" class="policy-section">
+                <h2>4. Principios que guían el tratamiento de la información</h2>
+                <p>La gestión de los datos personales por parte de Aonitek se basa en los siguientes principios:</p>
+                <ul>
+                    <li>Transparencia en la recopilación y utilización de la información.</li>
+                    <li>Minimización de datos, solicitando únicamente la información necesaria para cada finalidad.</li>
+                    <li>Utilización legítima y responsable de la información recibida.</li>
+                    <li>Protección mediante medidas técnicas y organizativas apropiadas.</li>
+                    <li>Respeto por los derechos de los titulares de los datos.</li>
+                    <li>Mejora continua de nuestros procesos de seguridad y privacidad.</li>
+                    <li>Uso responsable de tecnologías de inteligencia artificial como herramienta de asistencia y automatización, sin perder de vista la supervisión humana cuando resulte necesaria.</li>
+                </ul>
+                <p>Estos principios orientan el diseño de nuestros procesos internos y la incorporación de nuevas tecnologías, integraciones y servicios a medida que Aonitek continúa evolucionando.</p>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section id="section-5" class="policy-section">
+                <h2>5. Información que recopilamos</h2>
+                <p>La información que recopilamos dependerá de la forma en que cada persona interactúe con Aonitek y de los servicios o funcionalidades que utilice dentro del sitio web.</p>
+                <p>Nuestro objetivo es solicitar únicamente aquellos datos que resulten razonablemente necesarios para brindar una respuesta, ofrecer una demostración, evaluar una necesidad comercial o mejorar la experiencia de navegación.</p>
+                <p>La información que podemos recopilar incluye, entre otros, los siguientes tipos de datos:</p>
+
+                <h3>5.1 Información proporcionada directamente por el usuario</h3>
+                <p>Cuando una persona se comunica con Aonitek mediante formularios, asistentes virtuales, solicitudes de contacto u otros canales disponibles en el sitio, podrá proporcionar voluntariamente información como:</p>
+                <ul>
+                    <li>Nombre y apellido.</li>
+                    <li>Dirección de correo electrónico.</li>
+                    <li>Número telefónico.</li>
+                    <li>Empresa u organización.</li>
+                    <li>Cargo o actividad profesional.</li>
+                    <li>País, provincia o ciudad.</li>
+                    <li>Cantidad de colaboradores o tamaño de la organización.</li>
+                    <li>Industria o sector de actividad.</li>
+                    <li>Sitio web de la empresa.</li>
+                    <li>Información relacionada con proyectos, necesidades o desafíos comerciales.</li>
+                    <li>Preferencias respecto de nuestros productos o servicios.</li>
+                    <li>Cualquier otro dato que el usuario decida compartir voluntariamente durante la conversación o mediante formularios.</li>
+                </ul>
+                <p>El suministro de esta información es voluntario. No obstante, en determinados casos podrá resultar necesario para que podamos responder adecuadamente una consulta, coordinar una reunión o elaborar una propuesta comercial.</p>
+
+                <h3>5.2 Información obtenida mediante asistentes inteligentes</h3>
+                <p>El sitio puede incorporar asistentes virtuales impulsados por inteligencia artificial con el objetivo de responder consultas, comprender necesidades comerciales, orientar al visitante y facilitar el contacto con nuestro equipo.</p>
+                <p>Durante dichas conversaciones podremos recopilar información como:</p>
+                <ul>
+                    <li>Consultas realizadas;</li>
+                    <li>Respuestas proporcionadas;</li>
+                    <li>Información comercial compartida por el visitante;</li>
+                    <li>Intereses manifestados;</li>
+                    <li>Productos o servicios consultados;</li>
+                    <li>Solicitudes de demostraciones;</li>
+                    <li>Preferencias comerciales;</li>
+                    <li>Horarios de contacto;</li>
+                    <li>Datos necesarios para continuar el proceso comercial.</li>
+                </ul>
+                <p>En determinados casos, los asistentes inteligentes podrán solicitar información adicional con el fin de comprender mejor las necesidades del usuario o derivar la conversación hacia un miembro de nuestro equipo.</p>
+                <p>Las conversaciones podrán almacenarse con fines de seguimiento comercial, mejora continua de los asistentes virtuales, control de calidad, capacitación de los modelos conversacionales y optimización de nuestros procesos de atención.</p>
+                <p>Recomendamos a los usuarios no compartir información confidencial, credenciales de acceso, datos financieros sensibles u otra información que no resulte necesaria para atender la consulta realizada, salvo que ello sea expresamente solicitado dentro de un proceso comercial o contractual y mediante canales habilitados para tal fin.</p>
+
+                <h3>5.3 Información obtenida mediante formularios</h3>
+                <p>El sitio podrá incorporar diferentes formularios destinados, entre otras finalidades, a:</p>
+                <ul>
+                    <li>Solicitar información comercial;</li>
+                    <li>Solicitar una demostración;</li>
+                    <li>Agendar reuniones;</li>
+                    <li>Descargar recursos;</li>
+                    <li>Participar en eventos;</li>
+                    <li>Solicitar presupuestos;</li>
+                    <li>Acceder a contenido especializado;</li>
+                    <li>Inscribirse a actividades organizadas por Aonitek;</li>
+                    <li>Responder encuestas;</li>
+                    <li>Brindar comentarios sobre nuestros servicios.</li>
+                </ul>
+                <p>La información solicitada podrá variar según la finalidad de cada formulario.</p>
+
+                <h3>5.4 Documentos y archivos enviados por el usuario</h3>
+                <p>En determinadas funcionalidades presentes o futuras del sitio, Aonitek podrá permitir que los usuarios adjunten documentos, imágenes, archivos u otros contenidos necesarios para evaluar proyectos, brindar asesoramiento, analizar requerimientos o prestar determinados servicios.</p>
+                <p>El usuario declara que posee los derechos necesarios para compartir dicha información y que ésta no vulnera derechos de terceros.</p>
+                <p>Aonitek utilizará dichos archivos únicamente para las finalidades relacionadas con la solicitud realizada por el usuario, salvo autorización expresa para un uso diferente.</p>
+
+                <h3>5.5 Información recopilada automáticamente</h3>
+                <p>Cuando un visitante accede al sitio web, determinados datos técnicos podrán recopilarse automáticamente con fines de seguridad, funcionamiento y mejora de la experiencia de navegación.</p>
+                <p>Entre ellos podrán encontrarse:</p>
+                <ul>
+                    <li>Dirección IP;</li>
+                    <li>Tipo de navegador;</li>
+                    <li>Sistema operativo;</li>
+                    <li>Idioma del navegador;</li>
+                    <li>Dispositivo utilizado;</li>
+                    <li>Resolución de pantalla;</li>
+                    <li>Proveedor de acceso a Internet;</li>
+                    <li>Páginas visitadas;</li>
+                    <li>Fecha y hora de acceso;</li>
+                    <li>Duración de la sesión;</li>
+                    <li>Páginas de origen y destino;</li>
+                    <li>Identificadores técnicos del dispositivo;</li>
+                    <li>Información relacionada con el rendimiento y funcionamiento del sitio.</li>
+                </ul>
+                <p>Esta información normalmente no permite identificar directamente a una persona, aunque en determinadas circunstancias podría asociarse con otros datos disponibles.</p>
+
+                <h3>5.6 Información proveniente de terceros</h3>
+                <p>Cuando el usuario autorice determinadas integraciones o cuando resulte necesario para atender una solicitud comercial, Aonitek podrá recibir información proveniente de terceros, incluyendo plataformas tecnológicas, sistemas de gestión comercial (CRM), herramientas de automatización, agendas de reuniones, servicios de correo electrónico, plataformas publicitarias, redes sociales, proveedores de autenticación u otros servicios utilizados para la prestación de nuestras actividades.</p>
+                <p>La utilización de dicha información estará limitada a las finalidades para las cuales fue obtenida y respetará las condiciones establecidas por los respectivos proveedores y la normativa aplicable.</p>
+
+                <h3>5.7 Información que procuramos no recopilar</h3>
+                <p>Aonitek procura no solicitar ni recopilar deliberadamente información considerada sensible, incluyendo datos relativos a salud, origen racial o étnico, creencias religiosas, opiniones políticas, afiliación sindical, datos biométricos u otras categorías especialmente protegidas por la legislación vigente.</p>
+                <p>Solicitamos a nuestros visitantes que eviten compartir este tipo de información salvo que resulte estrictamente necesaria para la prestación de un servicio específico y exista una base legal que habilite su tratamiento.</p>
+                <p>En caso de que dicha información sea recibida de manera involuntaria, adoptaremos medidas razonables para limitar su utilización y protegerla conforme a la normativa aplicable.</p>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section id="section-6" class="policy-section">
+                <h2>6. Cómo utilizamos la información recopilada</h2>
+                <p>En Aonitek utilizamos la información personal de manera responsable y únicamente para las finalidades compatibles con la relación que mantenemos con nuestros visitantes, potenciales clientes, clientes y demás usuarios del sitio web.</p>
+                <p>En ningún caso comercializamos bases de datos personales ni vendemos la información de nuestros usuarios a terceros.</p>
+                <p>Dependiendo del tipo de interacción realizada, podremos utilizar la información recopilada para una o varias de las siguientes finalidades.</p>
+                <p>La utilización de herramientas automatizadas tiene como finalidad agilizar procesos administrativos y comerciales. Aonitek procura que las decisiones que puedan producir efectos relevantes para un usuario no dependan exclusivamente de procesos automatizados cuando resulte necesaria una valoración humana.</p>
+
+                <h3>6.1 Brindar atención comercial</h3>
+                <p>Utilizamos la información para responder consultas, comprender las necesidades del visitante, brindar asesoramiento inicial sobre nuestros servicios y ofrecer información relacionada con nuestras soluciones tecnológicas.</p>
+                <p>Esto incluye, entre otras actividades:</p>
+                <ul>
+                    <li>Responder consultas recibidas mediante el sitio web;</li>
+                    <li>Realizar contactos comerciales;</li>
+                    <li>Coordinar reuniones;</li>
+                    <li>Preparar demostraciones;</li>
+                    <li>Elaborar propuestas comerciales;</li>
+                    <li>Dar seguimiento a oportunidades de negocio;</li>
+                    <li>Brindar soporte previo a una contratación.</li>
+                </ul>
+
+                <h3>6.2 Personalizar la experiencia del usuario</h3>
+                <p>Podremos utilizar la información recopilada para adaptar la experiencia de navegación y ofrecer contenidos, recomendaciones o soluciones más relevantes según el perfil, intereses o actividad del visitante.</p>
+                <p>Esto puede incluir la personalización de contenidos mostrados por asistentes inteligentes, formularios dinámicos o futuras funcionalidades incorporadas al sitio.</p>
+
+                <h3>6.3 Operación de asistentes inteligentes</h3>
+                <p>Nuestros asistentes virtuales utilizan tecnologías de inteligencia artificial para comprender consultas, responder preguntas, asistir a los visitantes y facilitar el contacto con nuestro equipo.</p>
+                <p>La información intercambiada durante dichas conversaciones podrá utilizarse para:</p>
+                <ul>
+                    <li>Interpretar solicitudes;</li>
+                    <li>Generar respuestas;</li>
+                    <li>Continuar conversaciones iniciadas previamente;</li>
+                    <li>Identificar necesidades comerciales;</li>
+                    <li>Derivar consultas cuando resulte necesario;</li>
+                    <li>Mejorar el funcionamiento general de los asistentes.</li>
+                </ul>
+                <p>En determinados casos, las conversaciones podrán ser revisadas por miembros autorizados de nuestro equipo con fines de control de calidad, mejora del servicio, entrenamiento de flujos conversacionales o resolución de incidencias.</p>
+
+                <h3>6.4 Prestación y mejora de nuestros servicios</h3>
+                <p>La información recopilada nos permite comprender cómo interactúan los visitantes con nuestro sitio y con nuestros servicios.</p>
+                <p>Estos datos podrán utilizarse para:</p>
+                <ul>
+                    <li>Mejorar nuestros procesos comerciales;</li>
+                    <li>Optimizar la experiencia de usuario;</li>
+                    <li>Desarrollar nuevas funcionalidades;</li>
+                    <li>Corregir errores;</li>
+                    <li>Evaluar el rendimiento del sitio;</li>
+                    <li>Mejorar la precisión de nuestros asistentes inteligentes;</li>
+                    <li>Diseñar nuevos productos y servicios.</li>
+                </ul>
+
+                <h3>6.5 Automatización de procesos</h3>
+                <p>Como empresa especializada en automatización e inteligencia artificial, Aonitek podrá utilizar herramientas tecnológicas para procesar la información recopilada con el objetivo de agilizar tareas operativas y administrativas.</p>
+                <p>Esto podrá incluir, entre otros procesos:</p>
+                <ul>
+                    <li>Clasificación automática de consultas;</li>
+                    <li>Asignación de oportunidades comerciales;</li>
+                    <li>Integración con sistemas de gestión;</li>
+                    <li>Generación de tareas;</li>
+                    <li>Programación de reuniones;</li>
+                    <li>Seguimiento comercial;</li>
+                    <li>Actualización de bases de datos;</li>
+                    <li>Sincronización con plataformas utilizadas por Aonitek.</li>
+                </ul>
+                <p>Estas automatizaciones buscan mejorar la eficiencia operativa sin afectar los derechos de los usuarios.</p>
+
+                <h3>6.6 Comunicaciones</h3>
+                <p>Podremos utilizar la información de contacto para enviar comunicaciones relacionadas con:</p>
+                <ul>
+                    <li>Respuestas a consultas;</li>
+                    <li>Seguimiento de solicitudes;</li>
+                    <li>Propuestas comerciales;</li>
+                    <li>Novedades sobre nuestros servicios;</li>
+                    <li>Invitaciones a eventos;</li>
+                    <li>Demostraciones;</li>
+                    <li>Actualizaciones relevantes;</li>
+                    <li>Contenido técnico o educativo;</li>
+                    <li>Comunicaciones institucionales.</li>
+                </ul>
+                <p>Cuando la legislación aplicable lo requiera, dichas comunicaciones comerciales se enviarán únicamente con el consentimiento correspondiente y siempre ofrecerán mecanismos sencillos para dejar de recibirlas.</p>
+
+                <h3>6.7 Cumplimiento de obligaciones legales</h3>
+                <p>La información podrá utilizarse para cumplir obligaciones legales, regulatorias, administrativas, fiscales, contables o contractuales que resulten aplicables a Aonitek.</p>
+                <p>Asimismo, podremos conservar determinada información cuando sea necesario para ejercer o defender derechos en procedimientos administrativos, judiciales o extrajudiciales.</p>
+
+                <h3>6.8 Seguridad</h3>
+                <p>Utilizamos información técnica y de navegación para proteger el sitio web y nuestros servicios frente a amenazas de seguridad.</p>
+                <p>Ello incluye actividades destinadas a:</p>
+                <ul>
+                    <li>Detectar accesos no autorizados;</li>
+                    <li>Prevenir fraudes;</li>
+                    <li>Investigar incidentes de seguridad;</li>
+                    <li>Proteger nuestros sistemas;</li>
+                    <li>Mantener la disponibilidad de los servicios;</li>
+                    <li>Verificar el correcto funcionamiento de la infraestructura tecnológica.</li>
+                </ul>
+                <p>Aonitek mantiene procedimientos internos destinados a identificar, analizar y responder ante incidentes de seguridad que puedan afectar la confidencialidad, integridad o disponibilidad de la información, procurando minimizar su impacto y adoptar las medidas correctivas que resulten apropiadas en cada caso.</p>
+
+                <h3>6.9 Estadísticas y análisis</h3>
+                <p>Podremos utilizar información agregada o anonimizada para elaborar estadísticas que nos permitan comprender tendencias de uso, mejorar nuestros procesos y tomar decisiones estratégicas.</p>
+                <p>Siempre que sea posible, estos análisis se realizarán utilizando información que no permita identificar directamente a personas determinadas.</p>
+
+                <h3>6.10 Innovación y desarrollo de nuevas soluciones</h3>
+                <p>Aonitek desarrolla soluciones basadas en inteligencia artificial, automatización y tecnologías digitales en constante evolución.</p>
+                <p>Con el objetivo de mejorar nuestros productos y desarrollar nuevas funcionalidades, podremos analizar información obtenida durante la utilización del sitio, procurando aplicar procesos de anonimización o minimización de datos siempre que resulte técnicamente posible.</p>
+                <p>Nuestro compromiso es incorporar nuevas tecnologías respetando principios de privacidad desde el diseño ("Privacy by Design"), seguridad de la información y tratamiento responsable de los datos personales.</p>
+
+                <h3>6.11 Limitación de la finalidad</h3>
+                <p>No utilizaremos la información personal para finalidades incompatibles con aquellas para las cuales fue recopilada, salvo que exista consentimiento del titular, una obligación legal o cualquier otra base legítima prevista por la normativa aplicable.</p>
+                <p>Toda nueva finalidad relevante será incorporada mediante la actualización de esta Política de Privacidad cuando corresponda.</p>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section id="section-7" class="policy-section">
+                <h2>7. Uso Responsable de la Inteligencia Artificial</h2>
+                <p>La inteligencia artificial forma parte de muchas de las soluciones desarrolladas, implementadas o comercializadas por Aonitek.</p>
+                <p>Creemos que la innovación tecnológica debe ir acompañada de responsabilidad, transparencia y respeto por las personas. Por ello, procuramos que el diseño, implementación y utilización de tecnologías de inteligencia artificial se realicen siguiendo principios orientados a proteger la privacidad, la seguridad de la información y los derechos de nuestros usuarios.</p>
+
+                <h3>7.1 Utilización de asistentes inteligentes</h3>
+                <p>El sitio web podrá incorporar asistentes virtuales impulsados por inteligencia artificial con el objetivo de:</p>
+                <ul>
+                    <li>Responder consultas generales;</li>
+                    <li>Brindar información sobre nuestros servicios;</li>
+                    <li>Orientar a potenciales clientes;</li>
+                    <li>Recopilar información necesaria para comprender requerimientos comerciales;</li>
+                    <li>Facilitar la coordinación de reuniones;</li>
+                    <li>Derivar consultas hacia integrantes de nuestro equipo cuando resulte conveniente.</li>
+                </ul>
+                <p>Estos asistentes buscan mejorar la experiencia del usuario y agilizar la atención, sin reemplazar el criterio profesional cuando éste resulte necesario.</p>
+
+                <h3>7.2 Transparencia</h3>
+                <p>Siempre que sea razonablemente posible, procuraremos informar cuando un usuario esté interactuando con un asistente impulsado por inteligencia artificial.</p>
+                <p>Nuestro objetivo es que los visitantes comprendan cuándo determinadas respuestas son generadas mediante procesos automatizados y cuándo interviene directamente un integrante de nuestro equipo.</p>
+
+                <h3>7.3 Supervisión humana</h3>
+                <p>Aunque muchas interacciones puedan desarrollarse de manera automática, determinadas conversaciones podrán ser revisadas por personal autorizado de Aonitek para:</p>
+                <ul>
+                    <li>Brindar una mejor atención;</li>
+                    <li>Resolver consultas complejas;</li>
+                    <li>Verificar el correcto funcionamiento de los asistentes;</li>
+                    <li>Mejorar la calidad de las respuestas;</li>
+                    <li>Corregir errores;</li>
+                    <li>Optimizar nuestros procesos.</li>
+                </ul>
+                <p>La utilización de inteligencia artificial no implica la ausencia de supervisión humana cuando ésta resulte apropiada.</p>
+
+                <h3>7.4 Mejora continua</h3>
+                <p>Las conversaciones mantenidas mediante nuestros asistentes podrán utilizarse para evaluar el rendimiento de los sistemas, mejorar la calidad de las respuestas, optimizar flujos conversacionales y desarrollar nuevas funcionalidades.</p>
+                <p>Siempre que resulte posible, procuraremos aplicar técnicas de anonimización, seudonimización o minimización de datos durante estos procesos.</p>
+
+                <h3>7.5 Limitaciones de la inteligencia artificial</h3>
+                <p>Si bien trabajamos para ofrecer respuestas precisas y útiles, los sistemas de inteligencia artificial pueden generar información incompleta, desactualizada o incorrecta.</p>
+                <p>Por este motivo:</p>
+                <ul>
+                    <li>Las respuestas generadas no constituyen asesoramiento legal, contable, médico, financiero ni profesional de ningún tipo;</li>
+                    <li>Las decisiones relevantes no deberían adoptarse exclusivamente sobre la base de respuestas generadas por inteligencia artificial;</li>
+                    <li>El usuario continúa siendo responsable de verificar la información antes de tomar decisiones importantes.</li>
+                </ul>
+                <p>Cuando corresponda, recomendamos consultar con un profesional especializado.</p>
+
+                <h3>7.6 Información compartida por el usuario</h3>
+                <p>Recomendamos a los usuarios no compartir información confidencial, secretos comerciales, credenciales de acceso, datos financieros sensibles ni cualquier otra información cuya divulgación pueda representar un riesgo para ellos o para terceros, salvo que ello resulte estrictamente necesario para la prestación de un servicio y exista un canal habilitado para tal finalidad.</p>
+                <p>Cuando el tratamiento de información confidencial resulte necesario en el marco de una relación comercial o contractual, Aonitek procurará aplicar medidas de seguridad acordes con la naturaleza de dicha información.</p>
+
+                <h3>7.7 Desarrollo responsable</h3>
+                <p>A medida que incorporemos nuevas capacidades de inteligencia artificial, procuraremos que su diseño contemple principios de:</p>
+                <ul>
+                    <li>Privacidad desde el diseño (Privacy by Design);</li>
+                    <li>Seguridad por diseño (Security by Design);</li>
+                    <li>Minimización de datos;</li>
+                    <li>Transparencia;</li>
+                    <li>Intervención humana cuando resulte apropiada;</li>
+                    <li>Mejora continua;</li>
+                    <li>Cumplimiento de la normativa aplicable.</li>
+                </ul>
+                <p>Nuestro compromiso es utilizar la inteligencia artificial como una herramienta para potenciar la productividad, mejorar la atención y facilitar la automatización de procesos, procurando siempre un equilibrio entre innovación tecnológica y protección de los derechos de las personas.</p>
+            </section>
+
+            <!-- SECTION 8 -->
+            <section id="section-8" class="policy-section">
+                <h2>8. Bases legales para el tratamiento de los datos</h2>
+                <p>El tratamiento de los datos personales realizado por Aonitek se fundamenta, según corresponda, en una o varias de las siguientes bases legales:</p>
+                <ul>
+                    <li>El consentimiento otorgado por el titular de los datos;</li>
+                    <li>La ejecución de medidas precontractuales solicitadas por el propio usuario;</li>
+                    <li>La necesidad de prestar servicios o responder consultas formuladas por el interesado;</li>
+                    <li>El cumplimiento de obligaciones legales o regulatorias;</li>
+                    <li>El interés legítimo de Aonitek para mejorar sus servicios, garantizar la seguridad de sus sistemas, prevenir fraudes y desarrollar nuevas soluciones tecnológicas, siempre que dicho interés no prevalezca sobre los derechos y libertades fundamentales de los titulares de los datos.</li>
+                </ul>
+                <p>Cuando la normativa aplicable exija el consentimiento previo para determinados tratamientos, Aonitek lo solicitará mediante mecanismos claros y adecuados.</p>
+            </section>
+
+            <!-- SECTION 9 -->
+            <section id="section-9" class="policy-section">
+                <h2>9. Con quién podemos compartir la información</h2>
+                <p>Aonitek no vende, alquila ni comercializa la información personal recopilada a través de su sitio web.</p>
+                <p>No obstante, para prestar determinados servicios o desarrollar nuestras actividades, podremos compartir información con terceros que actúen en nuestro nombre o que intervengan en la prestación de los servicios.</p>
+                <p>Entre ellos podrán encontrarse:</p>
+                <ul>
+                    <li>Proveedores de infraestructura tecnológica;</li>
+                    <li>Servicios de alojamiento en la nube;</li>
+                    <li>Plataformas de automatización;</li>
+                    <li>Sistemas de gestión comercial (CRM);</li>
+                    <li>Proveedores de correo electrónico;</li>
+                    <li>Plataformas de videoconferencia y agenda de reuniones;</li>
+                    <li>Herramientas de soporte;</li>
+                    <li>Servicios de analítica;</li>
+                    <li>Proveedores de inteligencia artificial;</li>
+                    <li>Pasarelas de pago, cuando corresponda;</li>
+                    <li>Organismos públicos o autoridades competentes cuando exista obligación legal.</li>
+                </ul>
+                <p>Todos los proveedores que procesen información por cuenta de Aonitek deberán actuar conforme a obligaciones contractuales de confidencialidad, seguridad y protección de datos, cuando ello resulte aplicable.</p>
+                <p>A medida que Aonitek incorpore nuevas tecnologías o proveedores, éstos podrán integrarse a nuestros procesos siempre que su utilización resulte compatible con las finalidades previstas en esta Política de Privacidad y con la normativa vigente.</p>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section id="section-10" class="policy-section">
+                <h2>10. Transferencias internacionales de datos</h2>
+                <p>Debido a la naturaleza de los servicios tecnológicos utilizados por Aonitek, determinada información podrá ser procesada, almacenada o transferida hacia servidores ubicados fuera de la República Argentina.</p>
+                <p>Ello puede incluir proveedores internacionales de infraestructura, servicios de inteligencia artificial, almacenamiento en la nube, comunicaciones, autenticación, automatización, análisis de datos u otras herramientas tecnológicas necesarias para la prestación de nuestros servicios.</p>
+                <p>Cuando se produzcan transferencias internacionales de datos, procuraremos que las mismas se realicen utilizando proveedores que implementen medidas razonables de seguridad y protección de la información, procurando respetar la legislación aplicable y las buenas prácticas internacionales en materia de privacidad.</p>
+                <p>La utilización de determinados servicios tecnológicos puede implicar el tratamiento de información en distintos países. Cuando ello ocurra, procuraremos seleccionar proveedores que ofrezcan niveles adecuados de seguridad y protección de datos acordes con la naturaleza de la información tratada.</p>
+            </section>
+
+            <!-- SECTION 11 -->
+            <section id="section-11" class="policy-section">
+                <h2>11. Conservación de la información</h2>
+                <p>Conservaremos la información personal únicamente durante el tiempo que resulte razonablemente necesario para cumplir las finalidades para las cuales fue recopilada, atender obligaciones legales, resolver controversias, proteger nuestros derechos o mantener registros administrativos cuando corresponda.</p>
+                <p>Los períodos de conservación podrán variar según la naturaleza de la información y la relación mantenida con cada usuario.</p>
+                <p>Con carácter general:</p>
+                <ul>
+                    <li>Las consultas comerciales podrán conservarse mientras exista un interés legítimo en dar seguimiento a la solicitud realizada.</li>
+                    <li>Las comunicaciones mantenidas con nuestro equipo podrán conservarse para fines de continuidad de la atención, mejora del servicio y control de calidad.</li>
+                    <li>Los registros técnicos y de seguridad podrán mantenerse durante el tiempo necesario para proteger la infraestructura tecnológica y prevenir incidentes.</li>
+                    <li>Determinada información podrá conservarse por plazos superiores cuando una obligación legal, contractual o reglamentaria así lo requiera.</li>
+                </ul>
+                <p>Una vez cumplida la finalidad correspondiente, procuraremos eliminar, anonimizar o bloquear la información cuando resulte técnica y legalmente posible.</p>
+            </section>
+
+            <!-- SECTION 12 -->
+            <section id="section-12" class="policy-section">
+                <h2>12. Seguridad de la información</h2>
+                <p>La seguridad de la información constituye uno de los pilares de Aonitek.</p>
+                <p>Implementamos medidas técnicas, organizativas y administrativas destinadas a proteger los datos personales frente a accesos no autorizados, alteraciones, pérdidas, destrucción, divulgación indebida o cualquier otra forma de tratamiento no autorizado.</p>
+                <p>Entre otras medidas, podremos implementar:</p>
+                <ul>
+                    <li>Utilización de conexiones seguras y cifradas;</li>
+                    <li>Controles de acceso a la información;</li>
+                    <li>Autenticación de usuarios y administradores;</li>
+                    <li>Políticas internas de acceso según funciones;</li>
+                    <li>Monitoreo de eventos de seguridad;</li>
+                    <li>Copias de respaldo cuando corresponda;</li>
+                    <li>Actualización de componentes tecnológicos;</li>
+                    <li>Evaluación periódica de riesgos;</li>
+                    <li>Selección responsable de proveedores tecnológicos.</li>
+                </ul>
+                <p>No obstante, ningún sistema informático, servicio en Internet o mecanismo de transmisión electrónica puede garantizar una seguridad absoluta.</p>
+                <p>Por ello, aunque Aonitek adopta medidas razonables para proteger la información bajo su responsabilidad, no puede garantizar que terceros no autorizados logren vulnerar los mecanismos de seguridad existentes.</p>
+                <p>En caso de detectarse un incidente de seguridad que pudiera afectar significativamente la información de nuestros usuarios, procuraremos adoptar las medidas técnicas y organizativas necesarias para mitigar sus efectos y cumplir las obligaciones legales que resulten aplicables.</p>
+            </section>
+
+            <!-- SECTION 13 -->
+            <section id="section-13" class="policy-section">
+                <h2>13. Cookies y tecnologías similares</h2>
+                <p>El sitio web podrá utilizar cookies y tecnologías similares con el objetivo de mejorar la experiencia de navegación, facilitar determinadas funcionalidades, recordar preferencias del usuario, proteger la seguridad del sitio y obtener información estadística sobre su utilización.</p>
+                <p>Las cookies son pequeños archivos que se almacenan en el dispositivo utilizado para acceder al sitio y que permiten reconocer determinadas características de la navegación.</p>
+                <p>Dependiendo de las funcionalidades incorporadas por Aonitek, podrán utilizarse, entre otras:</p>
+                <ul>
+                    <li>Cookies técnicas necesarias para el funcionamiento del sitio;</li>
+                    <li>Cookies funcionales destinadas a recordar preferencias;</li>
+                    <li>Cookies de rendimiento y análisis estadístico;</li>
+                    <li>Cookies de personalización;</li>
+                    <li>Cookies relacionadas con campañas de comunicación o publicidad, cuando corresponda.</li>
+                </ul>
+                <p>El usuario podrá configurar su navegador para bloquear o eliminar cookies. Sin embargo, ello podría afectar el correcto funcionamiento de determinadas funcionalidades del sitio.</p>
+                <p>A medida que Aonitek incorpore nuevas herramientas de análisis, medición o personalización, la presente Política podrá actualizarse para reflejar dichas tecnologías.</p>
+            </section>
+
+            <!-- SECTION 14 -->
+            <section id="section-14" class="policy-section">
+                <h2>14. Enlaces a sitios y servicios de terceros</h2>
+                <p>El sitio web podrá contener enlaces hacia plataformas, redes sociales, aplicaciones o servicios operados por terceros.</p>
+                <p>La presente Política de Privacidad no resulta aplicable a dichos sitios o servicios, los cuales poseen sus propias políticas de privacidad y condiciones de uso.</p>
+                <p>Aonitek no controla ni asume responsabilidad por las prácticas de privacidad, contenidos o servicios ofrecidos por terceros ajenos a nuestro sitio web.</p>
+                <p>Recomendamos revisar las políticas correspondientes antes de proporcionar información personal en dichas plataformas.</p>
+            </section>
+
+            <!-- SECTION 15 -->
+            <section id="section-15" class="policy-section">
+                <h2>15. Derechos de los titulares de los datos</h2>
+                <p>Los titulares de los datos personales podrán ejercer los derechos reconocidos por la legislación aplicable, incluyendo, según corresponda:</p>
+                <ul>
+                    <li>Solicitar acceso a la información que mantenemos sobre ellos;</li>
+                    <li>Solicitar la rectificación o actualización de datos inexactos o incompletos;</li>
+                    <li>Solicitar la supresión de datos cuando corresponda;</li>
+                    <li>Solicitar la limitación u oposición a determinados tratamientos;</li>
+                    <li>Retirar el consentimiento previamente otorgado cuando el tratamiento se base en éste;</li>
+                    <li>Solicitar información sobre el tratamiento realizado respecto de sus datos personales.</li>
+                </ul>
+                <p>Las solicitudes podrán realizarse enviando un correo electrónico a: <strong>info@aonitek.com</strong></p>
+                <p>Aonitek podrá solicitar información adicional razonable con el único fin de verificar la identidad del solicitante antes de dar curso a la solicitud correspondiente.</p>
+                <p>En la República Argentina, la Agencia de Acceso a la Información Pública (AAIP), en su carácter de órgano de control de la Ley N.º 25.326 de Protección de Datos Personales, tiene la facultad de atender denuncias y reclamos relacionados con el incumplimiento de las normas sobre protección de datos personales.</p>
+            </section>
+
+            <!-- SECTION 16 -->
+            <section id="section-16" class="policy-section">
+                <h2>16. Privacidad de menores de edad</h2>
+                <p>Nuestros servicios están dirigidos principalmente a empresas, organizaciones, profesionales independientes y personas mayores de edad.</p>
+                <p>El sitio web no está diseñado para recopilar deliberadamente información personal de menores de dieciséis (16) años.</p>
+                <p>Si tomamos conocimiento de que se ha recopilado información personal de un menor sin la correspondiente autorización legal cuando ésta resulte exigible, adoptaremos medidas razonables para eliminar dicha información en el menor tiempo posible.</p>
+            </section>
+
+            <!-- SECTION 17 -->
+            <section id="section-17" class="policy-section">
+                <h2>17. Actualizaciones de esta Política</h2>
+                <p>La tecnología, nuestros servicios y la normativa aplicable evolucionan constantemente.</p>
+                <p>Por ello, Aonitek podrá modificar o actualizar la presente Política de Privacidad para reflejar cambios en nuestros procesos, nuevas funcionalidades, modificaciones legales o mejoras en nuestras prácticas de protección de datos.</p>
+                <p>La versión vigente será siempre la publicada en el sitio web e indicará su fecha de última actualización.</p>
+                <p>Cuando los cambios resulten sustanciales y la legislación aplicable así lo requiera, procuraremos adoptar mecanismos razonables para informar dichas modificaciones.</p>
+                <p>La tecnología evoluciona constantemente y nuestros servicios también. Por ello, las referencias realizadas en esta Política respecto de determinadas funcionalidades, asistentes inteligentes, automatizaciones o tecnologías deberán interpretarse de manera amplia, comprendiendo también aquellas soluciones equivalentes o futuras que Aonitek incorpore para mejorar sus servicios, siempre respetando los principios establecidos en esta Política.</p>
+            </section>
+
+            <!-- SECTION 18 -->
+            <section id="section-18" class="policy-section">
+                <h2>18. Contacto</h2>
+                <p>Si tiene consultas, comentarios o desea ejercer cualquiera de los derechos previstos en esta Política de Privacidad, puede comunicarse con nosotros a través de:</p>
+                <ul>
+                    <li><strong>Responsable de la información y protección de datos:</strong> Gustavo Zamit</li>
+                    <li><strong>Ubicación:</strong> Comodoro Rivadavia, Provincia del Chubut, República Argentina</li>
+                    <li><strong>Correo electrónico:</strong> info@aonitek.com</li>
+                    <li><strong>Teléfono / WhatsApp:</strong> +54 9 297 4643218</li>
+                </ul>
+                <p>La presente Política de Privacidad deberá interpretarse de manera conjunta con los Términos y Condiciones del Sitio Web y con cualquier otro documento legal que Aonitek publique para regular servicios específicos. En caso de utilizar la plataforma disponible en app.aonitek.com, serán aplicables los documentos legales correspondientes a dicho servicio.</p>
+            </section>
+
+            <!-- SECTION 19 -->
+            <section id="section-19" class="policy-section">
+                <h2>19. Nuestro compromiso</h2>
+                <p>En Aonitek creemos que la transformación digital no consiste únicamente en incorporar nuevas tecnologías, sino también en utilizarlas de manera responsable.</p>
+                <p>La confianza de nuestros clientes constituye uno de los activos más importantes de nuestra organización.</p>
+                <p>Por ello, continuaremos desarrollando nuestras soluciones procurando integrar innovación, inteligencia artificial, automatización y protección de la privacidad bajo un mismo principio: utilizar la tecnología para generar valor sin perder de vista el respeto por las personas y por la información que deciden confiarnos.</p>
+                <p>Cada nueva herramienta, integración o servicio que incorporemos buscará mantener ese compromiso, fortaleciendo una cultura de transparencia, seguridad y mejora continua.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- JAVASCRIPT PARA FUNCIONALIDAD DEL SIDEBAR -->
+    
+</section>
+
+<!-- ============================================================================ -->
+<!-- FOOTER: Standard company links                                              -->
+<!-- ============================================================================ -->
+<footer data-section="footer" class="bg-dark border-t border-white/5 pt-20 pb-10 px-4 md:px-8 lg:px-24" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1 md:col-span-1">
+                <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center mb-6" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+                    <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="AONITEK Logo" class="h-26">
+                </a>
+                <p class="text-gray-500 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+                    Elevando el estándar de las PYMEs en Latinoamérica a través de IA aplicada y procesos automatizados "Done-For-You"
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">Navegación</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+                    <li><a href="#presencia-digital" class="hover:text-[#60a5fa] transition-colors">🌐 Presencia Digital</a></li>
+                    <li><a href="#empleados-digiales" class="hover:text-[#60a5fa] transition-colors">🤖 Empleados Digitales</a></li>
+                    <li><a href="#capacitacion" class="hover:text-[#60a5fa] transition-colors">🚀 Capacitaciones</a></li>
+                    <li><a href="https://aonitek.com/" class="hover:text-[#60a5fa] transition-colors">🏠 Inicio</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">Contacto</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+                    <a href="mailto:info@aonitek.com" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📧 info@aonitek.com</a>
+                    <li><a href="tel:+5492974643128" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📱 +54 9 297 4643128</a>                    
+                    <li>📍Comodoro Rivadavia, Chubut, Argentina</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">Redes Sociales</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+                    <li><a href="https://www.instagram.com/aonitek/" target="_blank" rel="noopener noreferrer" class="hover:text-[#60a5fa] transition-colors">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/aonitek" target="_blank" rel="noopener noreferrer" class="hover:text-[#60a5fa] transition-colors">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/aonitek" target="_blank" rel="noopener noreferrer" class="hover:text-[#60a5fa] transition-colors">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-bold tracking-widest uppercase" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <p>© 2026 AONITEK. TODOS LOS DERECHOS RESERVADOS.</p>
+            <p class="mt-4 md:mt-0 italic">IA para un continente imparable</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ============================================================================ -->
+<!-- JAVASCRIPT: Interactivity and Logic                                         -->
+<!-- ===== SCROLL HANDLER: Navbar background blur on scroll                      -->
+<!-- ===== MOBILE MENU TOGGLE: Open/close navigation on mobile                   -->
+<!-- ===== REVEAL ANIMATION: Fade-in effect for elements on scroll               -->
+<!-- ============================================================================ -->
+
+
+
+  <script src="script.js"></script>
+</body></html>
