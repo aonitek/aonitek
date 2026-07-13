@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Aonitek implementa inteligencia artificial en tu negocio con acompañamiento real. Página web + IA, agentes omnicanales y capacitación in-company. Resultados en 14 días. LATAM.">
+    
+    <link rel="canonical" href="https://aonitek.com">
+    
+    <!-- Open Graph / Social Media -->
+    
+    <meta property="og:url" content="https://aonitek.com">
+    
+    
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    
+
+    <!-- Schema.org Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aonitek",
+      "url": "https://aonitek.com",
+      "logo": "https://aonitek.com/logo.png",
+      "description": "Agencia de automatización con IA para PYMEs en Latinoamérica.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "areaServed": "LATAM"
+      }
+    }
+    </script>
+
+<!-- SEO Meta Tags -->
+<title>Landing Page - Jul 13, 2026</title>
+<meta property="og:title" content="Landing Page - Jul 13, 2026" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Landing Page - Jul 13, 2026" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mrjthq6n-971ka";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.aonitek.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5504');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='eEA9U749e5';
+  var apiBase='https://app.aonitek.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='eEA9U749e5';
+  var apiBase='https://app.aonitek.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+<!-- ============================================================================ -->
+<!-- NAVIGATION: Fixed top navbar with blur effect                               -->
+<!-- Features: Mobile toggle, Glassmorphism, CTA                                 -->
+<!-- ============================================================================ -->
+<nav data-section="navbar" id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-4 md:px-8 lg:px-12 flex items-center justify-between" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+    <div class="flex items-center space-x-2">
+        <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="AONITEK Logo" class="h-14">
+        </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <a href="#presencia-digital" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🌐 Presencia Digital</a>
+        <a href="#empleados-digitales" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🤖 Empleados Digitales</a>
+        <a href="#capacitacion" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🚀 Capacitación In-Company</a>
+        <a href="https://aonitek.com/" class="hover:text-[#60a5fa] transition-colors" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🏠 Inicio</a>
+    </div>
+
+    <div class="flex items-center space-x-4" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <a href="https://app.aonitek.com/" class="hidden sm:block bg-[#007a8f] text-white px-5 py-2.5 rounded-full font-bold text-sm btn-glow hover:scale-105 transition-transform" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            app. Aonitek →
+        </a>
+        <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-[#1e2d4a] z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold translate-x-full transition-transform duration-500 md:hidden overflow-hidden" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white" aria-label="Cerrar menú" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="#presencia-digital" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🌐 Presencia Digital</a>
+        <a href="#empleados-digitales" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🤖 Empleados Digitales</a>
+        <a href="#capacitacion" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🚀 Capacitación In-Company</a>
+        <a href="https://aonitek.com/" class="mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">🏠 Inicio</a>
+        <a href="https://app.aonitek.com/" class="bg-[#3b82f6] text-white px-8 py-4 rounded-full mobile-link" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">app. Aonitek →</a>
+    </div>
+</nav>
+
+<!-- ============================================================================ -->
+<!-- TERMS & CONDITIONS SECTION: Legal documentation page                        -->
+<!-- Features: Sidebar navigation, responsive layout, print-friendly             -->
+<!-- Mobile Padding: Ensures text never touches viewport edges                   -->
+<!-- ============================================================================ -->
+<section data-section="terms" class="bg-dark">
+    <!-- TERMS HEADER -->
+    <header class="terms-header">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="terms-breadcrumb">
+                <a href="https://aonitek.com">Inicio</a> / Términos y Condiciones
+            </div>
+            <h1 class="terms-title">Términos y Condiciones de Uso</h1>
+            <div class="terms-meta">Última actualización: Julio de 2026</div>
+        </div>
+    </header>
+
+    <!-- TERMS CONTENT -->
+    <div class="terms-container">
+        <!-- SIDEBAR - TABLE OF CONTENTS -->
+        <aside class="terms-sidebar">
+            <div class="terms-sidebar-title">Contenido</div>
+            <ul class="terms-toc">
+                <li><a href="#section-1">1. Introducción</a></li>
+                <li><a href="#section-2">2. Objeto del Sitio</a></li>
+                <li><a href="#section-3">3. Quiénes somos</a></li>
+                <li><a href="#section-4">4. Aceptación de Términos</a></li>
+                <li><a href="#section-5">5. Modificaciones</a></li>
+                <li><a href="#section-6">6. Uso Permitido</a></li>
+                <li><a href="#section-7">7. Información del Usuario</a></li>
+                <li><a href="#section-8">8. Asistentes Inteligentes</a></li>
+                <li><a href="#section-9">9. Propiedad Intelectual</a></li>
+                <li><a href="#section-10">10. Demostraciones</a></li>
+                <li><a href="#section-11">11. Propuestas Comerciales</a></li>
+                <li><a href="#section-12">12. Disponibilidad</a></li>
+                <li><a href="#section-13">13. Exactitud</a></li>
+                <li><a href="#section-14">14. Limitación de Responsabilidad</a></li>
+                <li><a href="#section-15">15. Uso de IA</a></li>
+                <li><a href="#section-16">16. Enlaces Externos</a></li>
+                <li><a href="#section-17">17. Confidencialidad</a></li>
+                <li><a href="#section-18">18. Suspensión de Acceso</a></li>
+                <li><a href="#section-19">19. Fuerza Mayor</a></li>
+                <li><a href="#section-20">20. Legislación</a></li>
+                <li><a href="#section-21">21. Modificaciones de Términos</a></li>
+                <li><a href="#section-22">22. Independencia de Cláusulas</a></li>
+                <li><a href="#section-23">23. Documentación Complementaria</a></li>
+                <li><a href="#section-24">24. Contacto</a></li>
+                <li><a href="#section-25">25. Disposición Final</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="terms-main">
+            <!-- SECTION 1 -->
+            <section id="section-1" class="terms-section">
+                <h2>1. Introducción</h2>
+                <p>Bienvenido a www.aonitek.com.</p>
+                <p>El presente documento establece los Términos y Condiciones que regulan el acceso, navegación y utilización del sitio web institucional de Aonitek (en adelante, el "Sitio").</p>
+                <p>Al acceder, navegar o utilizar cualquier funcionalidad del Sitio, el usuario declara haber leído, comprendido y aceptado las disposiciones contenidas en estos Términos y Condiciones.</p>
+                <p>Si el usuario no estuviera de acuerdo con cualquiera de las condiciones aquí establecidas, deberá abstenerse de utilizar el Sitio.</p>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section id="section-2" class="terms-section">
+                <h2>2. Objeto del Sitio</h2>
+                <p>El Sitio tiene carácter exclusivamente institucional e informativo.</p>
+                <p>Su finalidad es presentar Aonitek, dar a conocer sus servicios, compartir información relacionada con inteligencia artificial, automatización, transformación digital y soluciones tecnológicas, así como facilitar el contacto entre Aonitek y potenciales clientes.</p>
+                <p>El Sitio podrá incluir, entre otras funcionalidades:</p>
+                <ul>
+                    <li>Información sobre servicios</li>
+                    <li>Demostraciones de productos</li>
+                    <li>Asistentes inteligentes</li>
+                    <li>Formularios de contacto</li>
+                    <li>Solicitudes de reuniones</li>
+                    <li>Recursos técnicos</li>
+                    <li>Publicaciones</li>
+                    <li>Casos de éxito</li>
+                    <li>Noticias</li>
+                    <li>Material educativo</li>
+                    <li>Otros contenidos relacionados con las actividades desarrolladas por Aonitek</li>
+                </ul>
+                <p>La utilización del Sitio no implica por sí misma la contratación de ningún producto o servicio.</p>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section id="section-3" class="terms-section">
+                <h2>3. Quiénes somos</h2>
+                <p>Aonitek es una marca dedicada al desarrollo, implementación e integración de soluciones basadas en inteligencia artificial, automatización de procesos, asistentes inteligentes, agentes conversacionales, desarrollo tecnológico y consultoría para empresas y profesionales.</p>
+                <p>El Sitio constituye el canal institucional mediante el cual Aonitek presenta sus soluciones y facilita el contacto con personas interesadas en sus servicios.</p>
+                <p>Cuando corresponda, determinados servicios podrán prestarse mediante plataformas tecnológicas independientes, incluyendo la plataforma disponible en app.aonitek.com, la cual posee su propia documentación legal y condiciones de utilización.</p>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section id="section-4" class="terms-section">
+                <h2>4. Aceptación de los presentes Términos</h2>
+                <p>La utilización del Sitio implica la aceptación plena de estos Términos y Condiciones.</p>
+                <p>Asimismo, el usuario declara utilizar el Sitio de buena fe, respetando la legislación vigente y absteniéndose de realizar cualquier actividad que pueda afectar los derechos de Aonitek, de otros usuarios o de terceros.</p>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section id="section-5" class="terms-section">
+                <h2>5. Modificaciones</h2>
+                <p>Aonitek podrá modificar estos Términos y Condiciones en cualquier momento con el objeto de reflejar cambios tecnológicos, comerciales, normativos o relacionados con la evolución de sus servicios.</p>
+                <p>Las modificaciones producirán efectos desde su publicación en el Sitio.</p>
+                <p>La utilización continuada del Sitio luego de la publicación de dichas modificaciones implicará la aceptación de la versión vigente de los presentes Términos.</p>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section id="section-6" class="terms-section">
+                <h2>6. Uso permitido del Sitio</h2>
+                <p>El usuario podrá navegar y utilizar el Sitio únicamente con fines legítimos.</p>
+                <p>En particular, se compromete a no:</p>
+                <ul>
+                    <li>Utilizar el Sitio con fines ilícitos</li>
+                    <li>Intentar acceder sin autorización a sistemas internos</li>
+                    <li>Interferir en el funcionamiento del Sitio</li>
+                    <li>Realizar actividades que puedan afectar su disponibilidad</li>
+                    <li>Introducir código malicioso</li>
+                    <li>Obtener información mediante técnicas automatizadas no autorizadas</li>
+                    <li>Vulnerar medidas de seguridad</li>
+                    <li>Utilizar el Sitio para enviar contenido ilícito, ofensivo o fraudulento</li>
+                    <li>Utilizar la información publicada para desarrollar productos destinados a competir deslealmente con Aonitek</li>
+                </ul>
+                <p>El incumplimiento de estas obligaciones podrá dar lugar a la suspensión del acceso, sin perjuicio de las acciones legales que pudieran corresponder.</p>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section id="section-7" class="terms-section">
+                <h2>7. Información proporcionada por el usuario</h2>
+                <p>Cuando el usuario complete formularios, interactúe con asistentes inteligentes o utilice cualquier otro mecanismo de contacto disponible en el Sitio, declara que la información suministrada es verdadera, exacta y actualizada.</p>
+                <p>El usuario será responsable por la veracidad de los datos proporcionados y se compromete a mantenerlos actualizados cuando ello resulte necesario para la correcta gestión de su solicitud.</p>
+                <p>El envío de información falsa, incompleta o perteneciente a terceros sin autorización podrá impedir la adecuada prestación de nuestros servicios.</p>
+            </section>
+
+            <!-- SECTION 8 -->
+            <section id="section-8" class="terms-section">
+                <h2>8. Asistentes inteligentes</h2>
+                <p>El Sitio podrá incorporar asistentes virtuales impulsados por inteligencia artificial con el objetivo de brindar información general, responder consultas, orientar a potenciales clientes y facilitar el contacto con nuestro equipo.</p>
+                <p>El usuario reconoce que dichos asistentes constituyen herramientas de apoyo y que las respuestas generadas podrán contener imprecisiones, errores u omisiones.</p>
+                <p>Por ello, la información proporcionada por un asistente inteligente no deberá interpretarse como asesoramiento profesional, jurídico, contable, financiero, médico o de cualquier otra naturaleza especializada.</p>
+                <p>Cuando la consulta requiera una evaluación específica, Aonitek podrá derivarla a un integrante de su equipo para su revisión.</p>
+                <p>El usuario se compromete a no utilizar los asistentes inteligentes para introducir contenido ilícito, información confidencial innecesaria, código malicioso o cualquier otro material que pueda afectar el funcionamiento de los servicios.</p>
+            </section>
+
+            <!-- SECTION 9 -->
+            <section id="section-9" class="terms-section">
+                <h2>9. Propiedad intelectual</h2>
+                <p>Todo el contenido disponible en el Sitio, incluyendo, entre otros, textos, artículos, diseños, logotipos, marcas, nombres comerciales, imágenes, fotografías, ilustraciones, videos, gráficos, interfaces, documentos, bases de conocimiento, metodologías, diagramas, desarrollos conceptuales, demostraciones, flujos conversacionales, asistentes inteligentes, prompts, configuraciones, código fuente cuando corresponda, elementos audiovisuales y cualquier otro material publicado, es propiedad de Aonitek o de sus respectivos titulares y se encuentra protegido por la legislación aplicable en materia de propiedad intelectual e industrial.</p>
+                <p>El acceso al Sitio no implica la cesión, licencia o autorización para utilizar dichos contenidos más allá del uso estrictamente personal e informativo relacionado con la navegación del Sitio.</p>
+                <p>Queda prohibido, sin autorización previa y por escrito de Aonitek:</p>
+                <ul>
+                    <li>Copiar, reproducir o distribuir contenidos del Sitio</li>
+                    <li>Modificar o crear obras derivadas</li>
+                    <li>Utilizar nuestros contenidos con fines comerciales</li>
+                    <li>Eliminar avisos de propiedad intelectual</li>
+                    <li>Utilizar la marca Aonitek o signos distintivos similares que puedan generar confusión</li>
+                    <li>Reproducir la estructura, metodología o funcionamiento de nuestros asistentes inteligentes con fines comerciales</li>
+                    <li>Utilizar contenidos del Sitio para entrenar modelos de inteligencia artificial de terceros cuando ello implique la reproducción sustancial de nuestros materiales o afecte nuestros derechos de propiedad intelectual</li>
+                </ul>
+                <p>Las marcas, nombres comerciales o logotipos pertenecientes a terceros que eventualmente aparezcan en el Sitio son propiedad de sus respectivos titulares y su inclusión tiene únicamente fines identificativos o informativos.</p>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section id="section-10" class="terms-section">
+                <h2>10. Demostraciones, ejemplos y contenidos informativos</h2>
+                <p>El Sitio podrá incluir demostraciones, ejemplos de uso, casos prácticos, simulaciones, prototipos, imágenes ilustrativas, videos, capturas de pantalla o cualquier otro contenido destinado a mostrar el funcionamiento general de nuestras soluciones.</p>
+                <p>Salvo que se indique expresamente lo contrario:</p>
+                <ul>
+                    <li>Las demostraciones tienen únicamente fines ilustrativos</li>
+                    <li>No constituyen una garantía de resultados</li>
+                    <li>No representan necesariamente la totalidad de las funcionalidades disponibles</li>
+                    <li>Podrán modificarse, actualizarse o discontinuarse sin previo aviso</li>
+                    <li>No constituyen una oferta contractual</li>
+                </ul>
+                <p>Los resultados obtenidos mediante nuestras soluciones dependerán de múltiples factores, incluyendo la calidad de la información proporcionada por el cliente, las integraciones utilizadas, la correcta configuración de los servicios y las características particulares de cada proyecto.</p>
+            </section>
+
+            <!-- SECTION 11 -->
+            <section id="section-11" class="terms-section">
+                <h2>11. Propuestas comerciales</h2>
+                <p>La información publicada en el Sitio tiene carácter exclusivamente informativo.</p>
+                <p>Las referencias a productos, servicios, funcionalidades, beneficios, precios orientativos o características técnicas no constituyen una oferta comercial vinculante.</p>
+                <p>Toda propuesta económica, presupuesto, cotización, alcance técnico o cronograma de trabajo únicamente será válida cuando haya sido emitido expresamente por Aonitek mediante los canales oficiales de comunicación.</p>
+                <p>Aonitek podrá modificar, ampliar o actualizar sus servicios, metodologías, planes, funcionalidades o condiciones comerciales sin que ello genere obligación de mantener versiones anteriores o condiciones previamente publicadas en el Sitio.</p>
+            </section>
+
+            <!-- SECTION 12 -->
+            <section id="section-12" class="terms-section">
+                <h2>12. Disponibilidad del Sitio</h2>
+                <p>Aonitek realiza esfuerzos razonables para mantener el Sitio disponible y actualizado.</p>
+                <p>No obstante, debido a la naturaleza de Internet y de los servicios tecnológicos, no garantizamos que el Sitio se encuentre disponible de manera ininterrumpida, libre de errores o completamente actualizado en todo momento.</p>
+                <p>Podremos suspender temporalmente el acceso al Sitio por motivos de mantenimiento, mejoras, actualizaciones, tareas de seguridad, causas técnicas o circunstancias ajenas a nuestro control.</p>
+                <p>Aonitek no será responsable por interrupciones derivadas de fallas en proveedores de infraestructura, servicios de telecomunicaciones, energía, ataques informáticos, desastres naturales, actos de terceros o cualquier otra situación que exceda nuestro control razonable.</p>
+            </section>
+
+            <!-- SECTION 13 -->
+            <section id="section-13" class="terms-section">
+                <h2>13. Exactitud de la información</h2>
+                <p>Procuramos que la información publicada en el Sitio sea clara, precisa y se mantenga actualizada.</p>
+                <p>Sin embargo, debido a la evolución constante de la tecnología y de nuestros servicios, determinados contenidos podrán contener errores involuntarios, imprecisiones, información desactualizada o referencias a funcionalidades que hayan sido modificadas.</p>
+                <p>Aonitek podrá actualizar, corregir o eliminar contenidos del Sitio en cualquier momento y sin necesidad de notificación previa.</p>
+                <p>El usuario reconoce que la utilización de la información publicada se realiza bajo su propia responsabilidad.</p>
+            </section>
+
+            <!-- SECTION 14 -->
+            <section id="section-14" class="terms-section">
+                <h2>14. Limitación de responsabilidad</h2>
+                <p>En la máxima medida permitida por la legislación aplicable, Aonitek no será responsable por daños directos o indirectos derivados de:</p>
+                <ul>
+                    <li>La utilización o imposibilidad de utilización del Sitio</li>
+                    <li>Decisiones adoptadas sobre la base de información publicada en el Sitio</li>
+                    <li>Errores u omisiones involuntarias en los contenidos</li>
+                    <li>Interrupciones temporales del servicio</li>
+                    <li>Ataques informáticos o accesos no autorizados realizados por terceros</li>
+                    <li>Incompatibilidades técnicas entre el Sitio y el dispositivo del usuario</li>
+                    <li>Actuaciones de terceros ajenos al control de Aonitek</li>
+                </ul>
+                <p>Nada de lo dispuesto en estos Términos limita aquellos derechos que la legislación aplicable considere irrenunciables.</p>
+            </section>
+
+            <!-- SECTION 15 -->
+            <section id="section-15" class="terms-section">
+                <h2>15. Uso de inteligencia artificial</h2>
+                <p>Aonitek desarrolla e implementa soluciones basadas en inteligencia artificial como herramienta de asistencia, automatización y mejora de procesos.</p>
+                <p>El usuario reconoce que las respuestas generadas mediante asistentes inteligentes pueden presentar limitaciones inherentes a este tipo de tecnologías y que, en consecuencia, deberán interpretarse como información de carácter general.</p>
+                <p>Las respuestas generadas automáticamente no constituyen asesoramiento profesional y no reemplazan el análisis humano cuando la naturaleza de la consulta así lo requiera.</p>
+                <p>Aonitek procura mejorar continuamente el funcionamiento de sus asistentes inteligentes, aunque no garantiza la ausencia absoluta de errores, imprecisiones o interpretaciones incorrectas.</p>
+                <p>El usuario continúa siendo responsable de evaluar la conveniencia de la información recibida antes de adoptar decisiones relevantes.</p>
+            </section>
+
+            <!-- SECTION 16 -->
+            <section id="section-16" class="terms-section">
+                <h2>16. Enlaces a sitios y servicios de terceros</h2>
+                <p>El Sitio podrá contener enlaces, referencias o integraciones con sitios web, plataformas, aplicaciones o servicios operados por terceros.</p>
+                <p>Dichos enlaces se proporcionan únicamente con fines informativos, funcionales o para facilitar el acceso a servicios complementarios.</p>
+                <p>Aonitek no controla ni garantiza la disponibilidad, seguridad, contenido, políticas o prácticas de privacidad de dichos servicios externos y, en consecuencia, no asume responsabilidad por los productos, servicios, contenidos o actuaciones de terceros.</p>
+                <p>La utilización de sitios o plataformas de terceros quedará sujeta a los términos y condiciones y políticas de privacidad establecidos por sus respectivos titulares.</p>
+            </section>
+
+            <!-- SECTION 17 -->
+            <section id="section-17" class="terms-section">
+                <h2>17. Confidencialidad de las comunicaciones</h2>
+                <p>La información que un usuario comparta con Aonitek a través del Sitio será tratada conforme a lo establecido en nuestra Política de Privacidad.</p>
+                <p>No obstante, el envío de consultas, propuestas, ideas, sugerencias o información comercial mediante formularios, correo electrónico o asistentes inteligentes no implica la celebración de un acuerdo de confidencialidad entre las partes, salvo que exista un acuerdo expreso y por escrito que establezca lo contrario.</p>
+                <p>Cuando un proyecto requiera el intercambio de información confidencial o estratégica, Aonitek podrá proponer la celebración de un Acuerdo de Confidencialidad (NDA) antes de iniciar el tratamiento de dicha información.</p>
+                <p>Por este motivo, recomendamos a los usuarios no compartir secretos comerciales, credenciales de acceso, información financiera sensible u otra información confidencial durante las consultas iniciales, salvo que ello resulte estrictamente necesario y exista un acuerdo específico que lo contemple.</p>
+            </section>
+
+            <!-- SECTION 18 -->
+            <section id="section-18" class="terms-section">
+                <h2>18. Suspensión o restricción del acceso</h2>
+                <p>Aonitek podrá suspender, limitar o restringir el acceso al Sitio, total o parcialmente, cuando resulte razonablemente necesario para:</p>
+                <ul>
+                    <li>Proteger la seguridad de la infraestructura tecnológica</li>
+                    <li>Prevenir actividades ilícitas o fraudulentas</li>
+                    <li>Realizar tareas de mantenimiento o actualización</li>
+                    <li>Cumplir obligaciones legales o requerimientos de autoridades competentes</li>
+                    <li>Investigar incidentes de seguridad</li>
+                    <li>Proteger los derechos, activos o intereses legítimos de Aonitek o de terceros</li>
+                </ul>
+                <p>Siempre que las circunstancias lo permitan, procuraremos que dichas medidas tengan un alcance proporcional y una duración limitada al tiempo estrictamente necesario.</p>
+            </section>
+
+            <!-- SECTION 19 -->
+            <section id="section-19" class="terms-section">
+                <h2>19. Fuerza mayor</h2>
+                <p>Aonitek no será responsable por el incumplimiento o retraso en el cumplimiento de obligaciones cuando ello sea consecuencia de acontecimientos fuera de su control razonable, incluyendo, entre otros:</p>
+                <ul>
+                    <li>Desastres naturales</li>
+                    <li>Incendios</li>
+                    <li>Inundaciones</li>
+                    <li>Conflictos laborales</li>
+                    <li>Actos de autoridad</li>
+                    <li>Guerras</li>
+                    <li>Disturbios civiles</li>
+                    <li>Interrupciones generalizadas de Internet</li>
+                    <li>Fallas de proveedores tecnológicos</li>
+                    <li>Ciberataques de gran escala</li>
+                    <li>Cortes prolongados de energía</li>
+                    <li>Cualquier otra circunstancia imprevisible o inevitable</li>
+                </ul>
+                <p>En tales casos, las obligaciones afectadas se considerarán suspendidas mientras persistan las circunstancias que impidan razonablemente su cumplimiento.</p>
+            </section>
+
+            <!-- SECTION 20 -->
+            <section id="section-20" class="terms-section">
+                <h2>20. Legislación aplicable y jurisdicción</h2>
+                <p>Los presentes Términos y Condiciones se regirán e interpretarán de conformidad con las leyes de la República Argentina.</p>
+                <p>Toda controversia relacionada con la interpretación, validez, ejecución o cumplimiento de estos Términos será sometida a la jurisdicción de los tribunales ordinarios competentes de la Provincia del Chubut, República Argentina, salvo que una norma de orden público disponga otra jurisdicción obligatoria.</p>
+                <p>Antes de iniciar acciones judiciales, las partes procurarán resolver cualquier diferencia mediante una instancia de diálogo y negociación de buena fe.</p>
+            </section>
+
+            <!-- SECTION 21 -->
+            <section id="section-21" class="terms-section">
+                <h2>21. Modificaciones de los presentes Términos</h2>
+                <p>Aonitek podrá actualizar estos Términos y Condiciones cuando resulte necesario para reflejar:</p>
+                <ul>
+                    <li>Cambios en la legislación aplicable</li>
+                    <li>Incorporación de nuevos servicios</li>
+                    <li>Evolución tecnológica</li>
+                    <li>Nuevas funcionalidades del Sitio</li>
+                    <li>Mejoras en nuestros procesos</li>
+                    <li>Cambios organizacionales</li>
+                    <li>Adecuaciones relacionadas con seguridad o privacidad</li>
+                </ul>
+                <p>La versión vigente será siempre la publicada en el Sitio e indicará la fecha de su última actualización.</p>
+                <p>La continuidad en el uso del Sitio luego de la publicación de dichas modificaciones implicará la aceptación de la versión vigente de estos Términos.</p>
+            </section>
+
+            <!-- SECTION 22 -->
+            <section id="section-22" class="terms-section">
+                <h2>22. Independencia de las cláusulas</h2>
+                <p>Si cualquier disposición de los presentes Términos fuera declarada inválida, ilegal o inaplicable por una autoridad competente, dicha circunstancia no afectará la validez de las restantes disposiciones, las cuales continuarán plenamente vigentes en la máxima medida permitida por la legislación aplicable.</p>
+                <p>Las disposiciones afectadas serán interpretadas, en la medida de lo posible, de forma coherente con la finalidad originalmente perseguida por las partes.</p>
+            </section>
+
+            <!-- SECTION 23 -->
+            <section id="section-23" class="terms-section">
+                <h2>23. Documentación complementaria</h2>
+                <p>Los presentes Términos deberán interpretarse conjuntamente con:</p>
+                <ul>
+                    <li>La Política de Privacidad de www.aonitek.com</li>
+                    <li>Cualquier aviso legal publicado en el Sitio</li>
+                    <li>Las condiciones particulares que eventualmente regulen determinados servicios o campañas</li>
+                    <li>La documentación legal correspondiente a la plataforma disponible en app.aonitek.com, cuando el usuario acceda o utilice dicho servicio</li>
+                </ul>
+                <p>Cada documento regula aspectos específicos de la relación entre Aonitek y los usuarios, debiendo interpretarse de forma armónica y complementaria.</p>
+            </section>
+
+            <!-- SECTION 24 -->
+            <section id="section-24" class="terms-section">
+                <h2>24. Contacto</h2>
+                <p>Para consultas relacionadas con estos Términos y Condiciones o con el funcionamiento del Sitio, puede comunicarse con:</p>
+                <div class="bg-surface rounded-lg p-6 mt-6 border border-white/10">
+                    <p class="font-semibold text-white mb-2">Aonitek</p>
+                    <p class="text-gray-400">Responsable: Gustavo Zamit</p>
+                    <p class="text-gray-400">Comodoro Rivadavia, Provincia del Chubut, República Argentina</p>
+                    <p class="text-gray-400 mt-3">
+                        <span class="text-accent font-semibold">Correo electrónico:</span><br>
+                        <a href="mailto:info@aonitek.com" class="text-accent hover:underline">info@aonitek.com</a>
+                    </p>
+                    <p class="text-gray-400 mt-3">
+                        <span class="text-accent font-semibold">Teléfono / WhatsApp:</span><br>
+                        <a href="tel:+5492974643218" class="text-accent hover:underline">+54 9 297 4643218</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 25 -->
+            <section id="section-25" class="terms-section">
+                <h2>25. Disposición final</h2>
+                <p>El Sitio www.aonitek.com representa la presencia institucional de Aonitek y constituye un espacio destinado a compartir conocimiento, presentar soluciones tecnológicas y facilitar el contacto con empresas, organizaciones y profesionales interesados en incorporar inteligencia artificial y automatización a sus procesos.</p>
+                <p>Nuestro objetivo es construir relaciones comerciales basadas en la confianza, la transparencia y el compromiso con la innovación responsable.</p>
+                <p>A medida que nuestras soluciones evolucionen, estos Términos podrán actualizarse para acompañar dicho crecimiento, procurando mantener un equilibrio entre la protección de los derechos de nuestros usuarios y el desarrollo sostenible de nuestros servicios.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pt-12 mt-12 border-t border-white/5">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-1">
+                <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center mb-6" style="font-family: 'Inter', sans-serif;">
+                    <img src="https://app.aonitek.com/api/landing-pages/images/coding-agent-assets%2F124%2F1775605563809_logo_transpa.png" alt="AONITEK Logo" class="h-16">
+                </a>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Elevando el estándar de las PYMEs en Latinoamérica a través de IA aplicada y procesos automatizados "Done-For-You"
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Navegación</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium">
+                    <li><a href="#presencia-digital" class="hover:text-accent transition-colors">🌐 Presencia Digital</a></li>
+                    <li><a href="#empleados-digitales" class="hover:text-accent transition-colors">🤖 Empleados Digitales</a></li>
+                    <li><a href="#capacitacion" class="hover:text-accent transition-colors">🚀 Capacitaciones</a></li>
+                    <li><a href="https://aonitek.com/" class="hover:text-accent transition-colors">🏠 Inicio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Contacto</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium">
+                    <li><a href="mailto:info@aonitek.com" class="hover:text-accent transition-colors">📧 info@aonitek.com</a></li>
+                    <li><a href="tel:+5492974643218" class="hover:text-accent transition-colors">📱 +54 9 297 4643218</a></li>
+                    <li>📍 Comodoro Rivadavia, Chubut, Argentina</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Redes Sociales</h4>
+                <ul class="space-y-4 text-sm text-gray-500 font-medium">
+                    <li><a href="https://www.instagram.com/aonitek/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/aonitek" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/aonitek" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-bold tracking-widest uppercase">
+            <p>© 2026 AONITEK. TODOS LOS DERECHOS RESERVADOS.</p>
+            <p class="mt-4 md:mt-0 italic">IA para un continente imparable</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================================ -->
+<!-- JAVASCRIPT: Interactivity and Logic                                         -->
+<!-- ===== SCROLL HANDLER: Navbar background blur on scroll                      -->
+<!-- ===== MOBILE MENU TOGGLE: Open/close navigation on mobile                   -->
+<!-- ===== TABLE OF CONTENTS: Active section highlighting on scroll              -->
+<!-- ============================================================================ -->
+
+
+  <script src="script.js"></script>
+</body></html>
