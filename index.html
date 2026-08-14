@@ -62,14 +62,18 @@
 <script data-lp-token-hydrate>
 (function(){try{
   var slug="aonitek-ia-pyme-latam";
+  var SITEK="";
   var SK='lp_access_'+slug;
   var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
   var u=new URL(location.href);var found=null;var changed=false;
-  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
   if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
-  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
   if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
-  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
   function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
   if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
   if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
@@ -672,38 +676,86 @@
 </section>
 
 <!-- ============================================================================ -->
-<!-- VERTICALES SECTION: Tabbed industry demos                                   -->
+<!-- VERTICALES SECTION: Demos clickables                                   -->
 <!-- ============================================================================ -->
 <section data-section="verticales" id="verticales" class="py-24 px-4 md:px-8 lg:px-24 bg-surface" style="font-family: 'Inter', sans-serif; font-weight: 300,400,500,600,700,800,900;">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16 reveal">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Demos reales para tu industria</h2>
-            <p class="text-gray-400">Mirá cómo interactúa el agente según tu rubro</p>
+            <p class="text-gray-400">Hacé click y probá cada demo en vivo</p>
         </div>
 
-        <!-- Vertical Tabs -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
-            <button class="vertical-tab px-6 py-3 rounded-full font-bold border border-white/10 hover:border-accent/50 active transition-all" data-target="salud">🏥 Salud</button>
-            <button class="vertical-tab px-6 py-3 rounded-full font-bold border border-white/10 hover:border-accent/50 transition-all" data-target="ecommerce">🛍️ E-commerce</button>
-            <button class="vertical-tab px-6 py-3 rounded-full font-bold border border-white/10 hover:border-accent/50 transition-all" data-target="servicios">⚖️ Servicios Prof.</button>
-            <button class="vertical-tab px-6 py-3 rounded-full font-bold border border-white/10 hover:border-accent/50 transition-all" data-target="turismo">🏨 Turismo</button>
-        </div>
+       </div>
+<!-- Grid de Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4 md:px-0">
+  
+  <!-- CARD 1: Estudio Beltrán & Asociados -->
+<a href="https://app.aonitek.com/p/yBQrYkQd2A/estudio-beltran" target="_blank" rel="noopener" class="glass-card block overflow-hidden">
+  <!-- Imagen -->
+  <div class="aspect-video overflow-hidden bg-surface">
+    <img src="https://app.aonitek.com/objects/generated-images/124/1786047471487-594cf8daaf5f8224.png" alt="Demo Estudio Beltrán - IA para servicios profesionales" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+  </div>
+  <!-- Texto -->
+  <div class="p-5 md:p-6">
+    <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#60a5fa]/10 text-[#60a5fa] mb-3">
+      SERVICIOS PROFESIONALES
+    </span>
+    <h3 class="text-lg md:text-xl font-bold mb-2 text-white">
+      Estudio Beltrán & Asociados
+    </h3>
+    <p class="text-sm md:text-base text-gray-400 mb-4">
+      Automatización de consultas y agendamiento para estudio de abogados.
+    </p>
+    <span class="text-[#60a5fa] font-semibold text-sm md:text-base hover:translate-x-1 transition-transform inline-block">
+      Explorar caso →
+    </span>
+  </div>
+</a>
 
-        <!-- Chat Container -->
-        <div class="max-w-3xl mx-auto glass-card p-6 md:p-10 reveal overflow-hidden min-h-[450px]">
-            <div id="vertical-content" class="space-y-6">
-                <!-- Content injected via JS -->
-                <div class="flex items-center justify-center h-[300px]">
-                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-accent"></div>
-                </div>
-            </div>
-            
-            <!-- Dynamic Capabilities Tags -->
-            <div id="capability-tags" class="mt-12 flex flex-wrap gap-2 justify-center">
-                <!-- Tags injected via JS -->
-            </div>
-        </div>
-    </div>
+  <!-- CARD 2: MedicAI -->
+<a href="https://app.aonitek.com/p/kn6mZcQ/clinica-medic-ai-turnos-online" target="_blank" rel="noopener" class="glass-card block overflow-hidden">
+  <div class="aspect-video overflow-hidden bg-surface">
+    <img src="https://app.aonitek.com/api/landing-pages/images/landing-page-images%2F0%2F1779477033734_hero_image.png" alt="Demo MedicAI - agente IA para clínicas" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+  </div>
+  <div class="p-5 md:p-6">
+    <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#4ade80]/10 text-[#4ade80] mb-3">
+      SALUD
+    </span>
+    <h3 class="text-lg md:text-xl font-bold mb-2 text-white">
+      MedicAI
+    </h3>
+    <p class="text-sm md:text-base text-gray-400 mb-4">
+      Agendamiento automático de turnos, respuestas a consultas frecuentes y recordatorios de citas.
+    </p>
+    <span class="text-[#4ade80] font-semibold text-sm md:text-base hover:translate-x-1 transition-transform inline-block">
+      Ver demo →
+    </span>
+  </div>
+</a>
+
+  <!-- CARD 3: Cabuleros -->
+<a href="https://app.aonitek.com/p/UD87r5j5/lp-mq8kpaxw-a58dm" target="_blank" rel="noopener" class="glass-card block overflow-hidden">
+  <div class="aspect-video overflow-hidden bg-surface">
+    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80" alt="Demo Cabuleros - advergaming con IA" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+  </div>
+  <div class="p-5 md:p-6">
+    <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#00b8d4]/10 text-[#00b8d4] mb-3">
+      ADVERGAMING
+    </span>
+    <h3 class="text-lg md:text-xl font-bold mb-2 text-white">
+      Cabuleros
+    </h3>
+    <p class="text-sm md:text-base text-gray-400 mb-4">
+      Integración de IA en gamificación + marketing. Experiencias interactivas potenciadas con inteligencia artificial.
+    </p>
+    <span class="text-[#00b8d4] font-semibold text-sm md:text-base hover:translate-x-1 transition-transform inline-block">
+      Ver demo →
+    </span>
+  </div>
+</a>
+
+</div>
+
 </section>
 
 <!-- ============================================================================ -->
