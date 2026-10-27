@@ -21,7 +21,26 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        card: '#111111',
+                        surface: '#181818',
+                        accent: '#00b8d4',
+                        indigo: '#0099b2',
+                        border: 'rgba(255,255,255,0.08)',
+                    },
+                    fontFamily: {
+                        syne: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 
     
 
@@ -54,10 +73,9 @@
 <meta name="twitter:title" content="Impulsa tu PyME con Inteligencia Artificial | Aonitek" />
 <meta name="twitter:description" content="Implementamos IA en tu negocio en solo 7 días. Agentes inteligentes y capacitación in-company para PyMEs en LATAM. ¡Crece sin programar!" />
 <meta name="twitter:image" content="https://app.aonitek.com/api/landing-pages/images/landing-page-images%2F0%2F1775653564358_blob.jpeg" />
-<link rel="icon" href="favicon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <!-- End SEO Meta Tags -->
 <script data-lp-token-hydrate>
 (function(){try{
@@ -260,7 +278,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -337,14 +355,15 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
     }
   });
 })();
-</script>  <link rel="stylesheet" href="styles.css">
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased">
 
@@ -892,7 +911,7 @@
                 <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">Contacto</h4>
                 <ul class="space-y-4 text-sm text-gray-500 font-medium" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
                     <a href="mailto:info@aonitek.com" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📧 info@aonitek.com</a>
-                    <li><a href="tel:+5492974643128" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📱 +54 9 297 4643128</a>                    
+                    <li><a href="tel:+5492974643128" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📱 +54 9 297 4643218</a>                    
                     <li>📍Comodoro Rivadavia, Chubut, Argentina</li>
                 </ul>
             </div>
@@ -926,8 +945,97 @@
 <!-- ============================================================================ -->
 <!-- JAVASCRIPT: Interactivity and Logic                                         -->
 <!-- ============================================================================ -->
+<script>
+    // ===== SCROLL HANDLER =====
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-scrolled');
+            nav.classList.remove('py-4');
+            nav.classList.add('py-2');
+        } else {
+            nav.classList.remove('nav-scrolled');
+            nav.classList.add('py-4');
+            nav.classList.remove('py-2');
+        }
+    });
+
+    // ===== MOBILE MENU TOGGLE =====
+// Function: toggleMobileMenu()
+// Purpose: Show/hide navigation menu on mobile devices
+// Triggers: Click on hamburger menu button and close button
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const menuClose = document.getElementById('mobile-menu-close');
+const menu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.remove('translate-x-full');
+    document.body.style.overflow = 'hidden';  // ← NUEVO
+});
+
+menuClose.addEventListener('click', () => {
+    menu.classList.add('translate-x-full');
+    document.body.style.overflow = 'auto';  // ← NUEVO
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';  // ← NUEVO
+    });
+});
+
+    // ===== REVEAL ANIMATION =====
+    const revealCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== HERO CHAT ANIMATION =====
+    setTimeout(() => {
+        const typing = document.getElementById('typing-indicator');
+        const aiRes = document.getElementById('ai-response');
+        if(typing) {
+            typing.classList.remove('hidden');
+            setTimeout(() => {
+                typing.classList.add('hidden');
+                aiRes.classList.remove('opacity-0');
+            }, 1800);
+        }
+    }, 2000);
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            
+            // Close others
+            document.querySelectorAll('.faq-content').forEach(other => {
+                if(other !== content) {
+                    other.style.maxHeight = null;
+                    other.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                }
+            });
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        });
+    });
+
+ </script>
 
 
-
-  <script src="script.js"></script>
 </body></html>
