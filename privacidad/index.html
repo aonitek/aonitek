@@ -21,7 +21,26 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        card: '#111111',
+                        surface: '#181818',
+                        accent: '#00b8d4',
+                        indigo: '#0099b2',
+                        border: 'rgba(255,255,255,0.08)',
+                    },
+                    fontFamily: {
+                        syne: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 
     
 
@@ -52,14 +71,18 @@
 <script data-lp-token-hydrate>
 (function(){try{
   var slug="lp-mrjsiwvn-jv0ye";
+  var SITEK="";
   var SK='lp_access_'+slug;
   var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
   var u=new URL(location.href);var found=null;var changed=false;
-  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
   if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
-  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
   if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
-  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
   function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
   if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
   if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
@@ -246,7 +269,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -323,14 +346,15 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
     }
   });
 })();
-</script>  <link rel="stylesheet" href="styles.css">
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased">
 
@@ -915,7 +939,47 @@
     </div>
 
     <!-- JAVASCRIPT PARA FUNCIONALIDAD DEL SIDEBAR -->
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tocLinks = document.querySelectorAll('.policy-toc a');
+            const sections = document.querySelectorAll('.policy-section');
+
+            // Smooth scroll cuando se hace click en TOC
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Detectar sección activa al hacer scroll
+            window.addEventListener('scroll', function() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop - 150) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                // Actualizar clase active en TOC
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </section>
 
 <!-- ============================================================================ -->
@@ -947,7 +1011,7 @@
                 <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">Contacto</h4>
                 <ul class="space-y-4 text-sm text-gray-500 font-medium" style="font-family: 'Inter', sans-serif; font-weight: 300 400 500 600 700 800 900;">
                     <a href="mailto:info@aonitek.com" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📧 info@aonitek.com</a>
-                    <li><a href="tel:+5492974643128" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📱 +54 9 297 4643128</a>                    
+                    <li><a href="tel:+5492974643218" class="text-sm text-aonitek-muted hover:text-aonitek-green transition-colors">📱 +54 9 297 4643218</a>                    
                     <li>📍Comodoro Rivadavia, Chubut, Argentina</li>
                 </ul>
             </div>
@@ -976,8 +1040,157 @@
 <!-- ===== MOBILE MENU TOGGLE: Open/close navigation on mobile                   -->
 <!-- ===== REVEAL ANIMATION: Fade-in effect for elements on scroll               -->
 <!-- ============================================================================ -->
+<script>
+    // ===== SCROLL HANDLER =====
+    // Purpose: Add blur background to navbar when page is scrolled
+    // Triggers: Window scroll event
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-scrolled');
+            nav.classList.remove('py-4');
+            nav.classList.add('py-2');
+        } else {
+            nav.classList.remove('nav-scrolled');
+            nav.classList.add('py-4');
+            nav.classList.remove('py-2');
+        }
+    });
+
+    // ===== MOBILE MENU TOGGLE =====
+// Function: toggleMobileMenu()
+// Purpose: Show/hide navigation menu on mobile devices
+// Triggers: Click on hamburger menu button and close button
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const menuClose = document.getElementById('mobile-menu-close');
+const menu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.remove('translate-x-full');
+    document.body.style.overflow = 'hidden';  // ← NUEVO
+});
+
+menuClose.addEventListener('click', () => {
+    menu.classList.add('translate-x-full');
+    document.body.style.overflow = 'auto';  // ← NUEVO
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';  // ← NUEVO
+    });
+});
+
+    // ===== REVEAL ANIMATION =====
+    // Function: revealCallback(entries)
+    // Purpose: Trigger fade-in animation when elements enter viewport
+    // Uses: IntersectionObserver API for performance
+    const revealCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 
+       // ===== VERTICALS TABS LOGIC =====
+    // Function: renderVertical(rubro)
+    // Purpose: Render vertical-specific content and chat simulation
+    // Data: verticalData object contains chat messages and capability tags
+    const verticalData = {
+        salud: {
+            chat: [
+                { type: 'user', text: 'Hola, quería saber si tienen turnos para mañana y cuánto cuesta la consulta' },
+                { type: 'ai', text: '¡Hola! Claro. Mañana lunes tenemos disponibilidad a las 10:00 y 16:30. El valor de la consulta con el Dr. Garcia es de $35. ¿Querés que reservemos el de las 10:00?' },
+                { type: 'user', text: 'Sí, reservame a las 10.' },
+                { type: 'ai', text: '¡Perfecto! Turno confirmado. Te envié el recordatorio a tu mail y WhatsApp. ¿Necesitás algo más?' }
+            ],
+            tags: ['Agendamiento', 'Recordatorios', 'Info de precios', 'Seguimiento']
+        },
+        ecommerce: {
+            chat: [
+                { type: 'user', text: 'Hola, ¿tienen stock de la campera térmica en talle M color negro?' },
+                { type: 'ai', text: '¡Hola! Dejame chequear el inventario... Sí, nos quedan las últimas 3 unidades en talle M negro. El precio es $12.900 con envío gratis hoy.' },
+                { type: 'user', text: 'Genial, ¿tienen cuotas?' },
+                { type: 'ai', text: 'Sí, tenés 3 cuotas sin interés con cualquier tarjeta. Aquí tenés el link de pago directo: aonitek.pay/campera-negra' }
+            ],
+            tags: ['Catálogo IA', 'Gestión de stock', 'Link de pago', 'Post-venta']
+        },
+        servicios: {
+            chat: [
+                { type: 'user', text: 'Necesito asesoría legal para un contrato comercial, ¿cómo trabajan?' },
+                { type: 'ai', text: '¡Hola! Somos especialistas en contratos PYME. El proceso inicia con una revisión de 15 min para entender el caso. ¿Te parece agendar una llamada breve mañana?' },
+                { type: 'user', text: 'Dale, a las 11am puedo.' },
+                { type: 'ai', text: 'Agendado. El Dr. Martinez te contactará a las 11:00 am. Por favor, confirmame tu correo para enviarte el enlace de Zoom.' }
+            ],
+            tags: ['Calificación', 'Agendamiento', 'Onboarding', 'Primer filtro']
+        },
+        turismo: {
+            chat: [
+                { type: 'user', text: 'Queremos pasar 3 noches en julio, somos 2 adultos y 1 niño, ¿tienen disponibilidad?' },
+                { type: 'ai', text: '¡Hola! Para esas fechas tenemos disponible la Suite Familiar con vista al lago. El total por las 3 noches es de $450 USD. ¿Incluyo el desayuno buffet?' },
+                { type: 'user', text: '¿Cuánto más sería?' },
+                { type: 'ai', text: 'Es un plus de $45 USD por toda la estadía. Si confirmás ahora, te bonificamos el late check-out.' }
+            ],
+            tags: ['Reservas', 'Disponibilidad', 'Multi-idioma', 'Upselling']
+        }
+    };
 
-  <script src="script.js"></script>
+    function renderVertical(rubro) {
+        const container = document.getElementById('vertical-content');
+        const tagContainer = document.getElementById('capability-tags');
+        const data = verticalData[rubro];
+        
+        if (!container || !tagContainer) return;
+        
+        container.innerHTML = '';
+        tagContainer.innerHTML = '';
+
+        data.chat.forEach((msg, idx) => {
+            setTimeout(() => {
+                const div = document.createElement('div');
+                div.className = msg.type === 'user' 
+                    ? 'chat-bubble-user p-3 max-w-[80%] self-end text-sm ml-auto mb-4 animate-[fadeInUp_0.5s_ease-out]' 
+                    : 'chat-bubble-ai p-3 max-w-[80%] self-start text-sm mr-auto mb-4 font-medium animate-[fadeInUp_0.5s_ease-out]';
+                div.textContent = msg.text;
+                container.appendChild(div);
+                container.scrollTop = container.scrollHeight;
+            }, idx * 800);
+        });
+
+        data.tags.forEach(tag => {
+            const span = document.createElement('span');
+            span.className = 'bg-white/5 border border-white/10 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest';
+            span.textContent = tag;
+            tagContainer.appendChild(span);
+        });
+    }
+
+    document.querySelectorAll('.vertical-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.vertical-tab').forEach(t => {
+                t.classList.remove('bg-accent', 'text-black', 'border-accent');
+                t.classList.add('border-white/10', 'text-white');
+            });
+            tab.classList.add('bg-accent', 'text-black', 'border-accent');
+            tab.classList.remove('border-white/10', 'text-white');
+            renderVertical(tab.dataset.target);
+        });
+    });
+
+    // Init first tab if exists
+    const firstTab = document.querySelector('.vertical-tab');
+    if (firstTab) {
+        firstTab.click();
+    }
+
+</script>
+
+
 </body></html>
