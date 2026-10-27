@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aonitek.com/</loc>
+    <lastmod>2026-10-27T19:36:08.278Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://aonitek.com/privacidad/</loc>
-    <lastmod>2026-10-27T19:32:23.386Z</lastmod>
+    <lastmod>2026-10-27T19:33:40.051Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -13,11 +18,6 @@
   <url>
     <loc>https://aonitek.com/servicios/</loc>
     <lastmod>2026-10-27T19:28:10.930Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aonitek.com/</loc>
-    <lastmod>2026-10-27T19:25:28.720Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
